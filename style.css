@@ -203,7 +203,7 @@ body {
     }
 
     .about-image {
-        width: 60%;
+        width: 50%;
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         margin-bottom: 20px;
         /* Adds space below the image */
@@ -256,12 +256,12 @@ body {
 }
 
 .about-image {
-    flex: 1;
-    min-width: 300px;
-    width: 100%;
-    /* Remove border-radius and add clip-path for rhombus shape */
+    flex: 0 0 30%;
+    /* Prevents growing/shrinking and sets base width */
+    min-width: 100px;
+    width: 30%;
     clip-path: polygon(50% 10%, 100% 50%, 50% 90%, 0% 50%);
-    /* Ensure your color variable is defined */
+    margin-bottom: 20px;
 }
 
 
