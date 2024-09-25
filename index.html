@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- Header Section with Navigation -->
+    <!-- Header Section with Hero -->
     <header id="header">
         <!-- Hero Section -->
         <div class="hero container">
@@ -49,6 +49,7 @@
             </div>
         </div>
     </header>
+    <!-- End of Header Section -->
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -59,6 +60,7 @@
             <a href="#contact" class="navbar-link">Contact</a>
         </div>
     </nav>
+    <!-- End of Navbar -->
 
     <!-- About Section -->
     <section id="about" class="about-section container">
@@ -85,28 +87,116 @@
             </div>
         </div>
     </section>
+    <!-- End of About Section -->
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section container">
+    <section id="skills" class="skills-section">
         <h2 class="section-title">My Skills</h2>
-        <div class="skills-content">
-            <!-- Skill Items -->
-            <div class="skill-item">
-                <h3>HTML</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress"></div>
+
+        <div class="accordion">
+
+            <!-- Programming Languages -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">Programming Languages</h3>
+                <div class="accordion-content">
+                    <span>C++</span>
+                    <span>Java</span>
+                    <span>JavaScript</span>
+                    <span>Python</span>
                 </div>
             </div>
-            <!-- Repeat for other skills -->
-            <div class="skill-item">
-                <h3>CSS</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress"></div>
+
+            <!-- Web Technologies -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">Web Technologies</h3>
+                <div class="accordion-content">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Angular</span>
+                    <span>React</span>
+                    <span>Node.js</span>
                 </div>
             </div>
-            <!-- Add more skill items as needed -->
+
+            <!-- Frameworks and Libraries -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">Frameworks and Libraries</h3>
+                <div class="accordion-content">
+                    <span>Spring Boot</span>
+                    <span>Hibernate</span>
+                </div>
+            </div>
+
+            <!-- Database Management -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">Database Management</h3>
+                <div class="accordion-content">
+                    <span>MySQL</span>
+                    <span>PostgreSQL</span>
+                    <span>JPA/Hibernate</span>
+                </div>
+            </div>
+
+            <!-- Operating Systems -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">Operating Systems</h3>
+                <div class="accordion-content">
+                    <span>Linux</span>
+                    <span>Windows</span>
+                </div>
+            </div>
+
+            <!-- Software Development -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">Software Development</h3>
+                <div class="accordion-content">
+                    <span>Object-Oriented Programming (OOP)</span>
+                    <span>Agile Development (Scrum, Kanban)</span>
+                    <span>Jira</span>
+                    <span>Version Control (Git, GitHub)</span>
+                    <span>Test-Driven Development (TDD)</span>
+                    <span>RESTful APIs</span>
+                    <span>Continuous Integration/Continuous Deployment (CI/CD)</span>
+                    <span>Multithreading</span>
+                </div>
+            </div>
+
+            <!-- Cloud and Virtualization -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">Cloud and Virtualization</h3>
+                <div class="accordion-content">
+                    <span>AWS</span>
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>Azure</span>
+                </div>
+            </div>
+
+            <!-- DevOps and Automation -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">DevOps and Automation</h3>
+                <div class="accordion-content">
+                    <span>Jenkins</span>
+                    <span>Ansible</span>
+                    <span>Terraform</span>
+                    <span>Bash scripting</span>
+                    <span>PowerShell</span>
+                </div>
+            </div>
+
+            <!-- Data Analysis and Machine Learning -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">Data Analysis and Machine Learning</h3>
+                <div class="accordion-content">
+                    <span>Pandas</span>
+                    <span>NumPy</span>
+                    <span>Machine Learning algorithms</span>
+                </div>
+            </div>
+
         </div>
     </section>
+
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section container">
@@ -124,13 +214,21 @@
             <!-- Add more project cards as needed -->
         </div>
     </section>
+    <!-- End of Projects Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section container">
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title">Get in Touch</h2>
         <div class="contact-content">
             <!-- Contact Form -->
             <form class="contact-form">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/livioangelim/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/livioangelim" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:it.livioam@gmail.com"><i class="fa fa-envelope"></i></a>
+                    <a href=#><i class="fa fa-id-card"></i></a>
+                </div>
                 <div class="form-group">
                     <input type="text" placeholder="Name" required />
                 </div>
@@ -142,26 +240,17 @@
                 </div>
                 <button type="submit" class="btn">Send Message</button>
             </form>
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>Email: <a href="mailto:livio@example.com">livio@example.com</a></p>
-                <p>Phone: +1 234 567 890</p>
-                <div class="social-links">
-                    <a href="https://github.com/livioangelim" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/livioangelim/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
         </div>
     </section>
+    <!-- End of Contact Section -->
 
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
-            <p>&copy; 2023 Livio Angelim. All Rights Reserved.</p>
+            <p>&copy; 2024 Livio A.M. All Rights Reserved.</p>
         </div>
     </footer>
+    <!-- End of Footer Section -->
 
     <!-- External JavaScript File -->
     <script src="script.js"></script>

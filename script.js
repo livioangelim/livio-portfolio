@@ -43,3 +43,21 @@ window.addEventListener("scroll", mainFn);
 
 // Initial call to set up the page correctly on load
 mainFn();
+
+// Skills Section: Accordion Behavior
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+
+        // Toggle the display of the content
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
+        // Optionally, you could hide other sections when one is opened
+        document.querySelectorAll('.accordion-content').forEach(item => {
+            if (item !== content) {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+

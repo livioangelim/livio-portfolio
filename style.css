@@ -58,6 +58,8 @@ body {
     text-transform: uppercase;
     position: relative;
     transition: color 0.2s;
+    text-decoration: none;
+
 }
 
 .navbar-link:hover {
@@ -98,6 +100,9 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out;
 }
+
+/* End of Navbar */
+
 
 /* Hero Section */
 #header {
@@ -153,7 +158,6 @@ body {
     background-color: var(--fulvous-color);
 }
 
-/* Adjust logo to be responsive */
 .hero-image {
     flex: 1;
     display: flex;
@@ -176,44 +180,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* This will center the content */
-        text-align: center;
-    }
-
-    .hero-image svg {
-        width: 60%;
-        margin: 20px 0;
-        /* Add some space between the logo and text */
-    }
-
-    .about-section {
-        text-align: center;
-    }
-
-    .about-image,
-    .about-text {
-        margin: 0 auto;
-        /* Ensures both image and text are centered */
-    }
-
-    .about-image {
-        width: 50%;
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        margin-bottom: 20px;
-        /* Adds space below the image */
-    }
-
-    .btn {
-        margin: 0 auto;
-        display: inline-block;
-    }
-}
 
 .lvo-logo {
     width: 75%;
@@ -233,6 +199,7 @@ body {
     margin-bottom: 40px;
     position: relative;
     color: var(--prussian-blue-color);
+    text-transform: uppercase;
 }
 
 .section-title::after {
@@ -241,8 +208,10 @@ body {
     height: 4px;
     background-color: var(--turquoise-color);
     display: block;
-    margin: 20px auto 0;
+    margin: 5px auto 0;
 }
+
+/* End of Hero Section */
 
 /* About Section */
 .about-section {
@@ -291,44 +260,82 @@ body {
 }
 
 .about-text .btn:hover {
-    background-color: var(--wine-color);
+    background-color: var(--fulvous-color);
 }
+
+/* End of About Section */
 
 /* Skills Section */
-.skills-section {
-    background-color: var(--vanilla-color);
-    padding: 80px 0;
+.skill-categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.skills-content {
+.skill-category {
+    margin: 20px;
+    text-align: center;
+}
+
+.skill-tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.skill-item {
-    flex: 1 1 45%;
-    margin-bottom: 20px;
+.skill-tags span {
+    background-color: #1E3C56;
+    color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 1rem;
 }
 
-.skill-item h3 {
-    font-size: 1.2rem;
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    /* Center-aligns accordion items */
+}
+
+.accordion-item {
     margin-bottom: 10px;
-    color: var(--prussian-blue-color);
-}
-
-.skill-bar {
-    background-color: #ddd;
+    border: 1px solid var(--prussian-blue-color);
     border-radius: 5px;
     overflow: hidden;
 }
 
-.skill-progress {
-    height: 12px;
-    background-color: var(--turquoise-color);
-    width: 0;
-    transition: width 1s ease-in-out;
+.accordion-header {
+    background-color: var(--prussian-blue-color);
+    color: var(--vanilla-color);
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    /* Center-aligns the accordion header */
 }
+
+.accordion-content {
+    display: none;
+    /* Hidden by default */
+    background-color: var(--vanilla-color);
+    padding: 10px 15px;
+    text-align: center;
+    /* Center-aligns the content */
+}
+
+.accordion-content span {
+    display: inline-block;
+    margin: 5px;
+    /* Adds space between tags */
+    background-color: var(--wine-color);
+    color: var(--vanilla-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* End of Skills Section */
 
 /* Projects Section */
 .projects-section {
@@ -372,7 +379,7 @@ body {
 
 .project-info p {
     font-size: 1rem;
-    color: #777;
+    color: var(--dark-grey-color);
     margin-bottom: 20px;
 }
 
@@ -389,86 +396,74 @@ body {
     background-color: var(--wine-color);
 }
 
+/* End of Projects Section */
+
+/* Contact Section */
 /* Contact Section */
 .contact-section {
+    text-align: center;
+    padding: 60px 20px;
     background-color: var(--vanilla-color);
-    padding: 80px 0;
 }
 
 .contact-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.contact-form,
-.contact-info {
-    flex: 1;
-    min-width: 300px;
-    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .contact-form {
-    padding-right: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
 }
 
-.contact-form .form-group {
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    font-size: 2rem;
+    color: var(--prussian-blue-color);
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--fulvous-color);
+}
+
+.form-group {
     margin-bottom: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     border: 1px solid var(--prussian-blue-color);
     border-radius: 5px;
     font-size: 1rem;
+    color: #333;
 }
 
 .contact-form button {
-    background-color: var(--turquoise-color);
-    color: var(--white-color);
-    padding: 10px 20px;
+    width: 100%;
+    background-color: var(--prussian-blue-color);
+    color: white;
+    padding: 12px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: var(--wine-color);
+    background-color: #D57E0B;
 }
 
-.contact-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--prussian-blue-color);
-}
-
-.contact-info p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-.contact-info a {
-    color: var(--prussian-blue-color);
-    text-decoration: none;
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    color: var(--prussian-blue-color);
-    font-size: 1.5rem;
-    margin-right: 15px;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: var(--turquoise-color);
-}
+/* End of Contact Session */
 
 /* Footer Section */
 .footer-section {
@@ -482,6 +477,8 @@ body {
     margin: 0;
     font-size: 1rem;
 }
+
+/* End of Footer Section */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -515,3 +512,5 @@ body {
         margin: 10px 0;
     }
 }
+
+/* End of Responsive Design */
