@@ -8,11 +8,7 @@ const navbarLinks = document.querySelectorAll(".navbar-link");
 // Sections
 const sections = document.querySelectorAll("section");
 
-// Skills Section
-const skillSection = document.querySelector(".skills-section");
-const skillProgress = document.querySelectorAll(".skill-progress");
-const progressBarPercents = [97, 89, 85, 87, 80, 70, 50];
-
+// Function to handle scrolling and sticky navbar
 const mainFn = () => {
     // Sticky Navbar
     if (window.scrollY >= navbarOffsetTop) {
@@ -30,34 +26,30 @@ const mainFn = () => {
             navbarLinks[i].classList.add("active");
         }
     });
-
-    // Skills Animation
-    if (window.scrollY + window.innerHeight >= skillSection.offsetTop) {
-        skillProgress.forEach((el, i) => {
-            el.style.width = `${progressBarPercents[i]}%`;
-        });
-    }
 };
 
+// Smooth Scroll Functionality for Navbar Links
+navbarLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetId = this.getAttribute('href').substring(1); // Get the target section's ID
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            const topOffset = targetElement.getBoundingClientRect().top + window.pageYOffset - navbar.offsetHeight;
+
+            // Scroll manually with smooth behavior
+            window.scrollTo({
+                top: topOffset,
+                behavior: 'smooth' // Ensure smooth scrolling
+            });
+        }
+    });
+});
+
+
+// Event listener for scrolling
 window.addEventListener("scroll", mainFn);
 
 // Initial call to set up the page correctly on load
 mainFn();
-
-// Skills Section: Accordion Behavior
-document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const content = header.nextElementSibling;
-
-        // Toggle the display of the content
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-
-        // Optionally, you could hide other sections when one is opened
-        document.querySelectorAll('.accordion-content').forEach(item => {
-            if (item !== content) {
-                item.style.display = 'none';
-            }
-        });
-    });
-});
-

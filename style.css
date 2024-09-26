@@ -10,6 +10,11 @@
     --font-family: 'Inria Sans', sans-serif;
 }
 
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -31,7 +36,7 @@ body {
     margin: auto;
 }
 
-/* Navbar */
+/* Navbar Section */
 .navbar {
     width: 100%;
     background-color: var(--prussian-blue-color);
@@ -101,7 +106,7 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
-/* End of Navbar */
+/* End of Navbar Section */
 
 
 /* Hero Section */
