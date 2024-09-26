@@ -23,7 +23,7 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 The hero section includes a welcoming message, introducing myself as a **Software Engineer**. It also contains navigation buttons to the projects and resume sections for easy access.
 
 ### 2. **About Me**
-A brief introduction detailing my professional background, including skills in **Java, Python, C++, and JavaScript**. This section highlights my experience in both front-end and back-end development using technologies like **Spring Boot**, **Angular**, **React**, and **Docker**.
+A brief introduction detailing my professional background, including skills in **Java, Python, C++, and JavaScript**. This section highlights my experience in both front-end and back-end development using technologies like **Spring Boot**, **Angular**, **React**, and **Docker**. It also includes social media icons for LinkedIn, GitHub and email, allowing people to connect with me on professional platforms.
 
 ### 3. **Skills Section**
 This section uses an accordion to present my skills in an organized manner. It covers the following categories:
@@ -36,9 +36,6 @@ This section uses an accordion to present my skills in an organized manner. It c
 
 ### 4. **Projects Section**
 A collection of projects with descriptions and links to their demo videos or GitHub repositories. This section showcases both front-end and back-end work, including real-world applications like a **Poker Game**.
-
-### 5. **Contact Section**
-This section features a contact form where visitors can send messages directly to my email. It also includes social media icons for LinkedIn and GitHub, allowing people to connect with me on professional platforms.
 
 ## How to View the Portfolio
 The portfolio is publicly accessible online. You can explore the live version by visiting the following URL:
