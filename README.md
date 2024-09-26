@@ -44,7 +44,7 @@ This section features a contact form where visitors can send messages directly t
 
 ## How to View the Portfolio
 The portfolio is publicly accessible online. You can explore the live version by visiting the following URL:
-[Live Portfolio](https://livioangelim.github.io/lvo-portfolio)
+[Live Portfolio](https://livioangelim.github.io/livio-portfolio/)
 
 ## How to Run Locally
 
