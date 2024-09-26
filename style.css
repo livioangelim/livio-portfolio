@@ -270,6 +270,21 @@ body {
     background-color: var(--fulvous-color);
 }
 
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    font-size: 2rem;
+    color: var(--prussian-blue-color);
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--fulvous-color);
+}
+
 /* End of About Section */
 
 /* Skills Section */
@@ -404,73 +419,6 @@ body {
 }
 
 /* End of Projects Section */
-
-/* Contact Section */
-/* Contact Section */
-.contact-section {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: var(--vanilla-color);
-}
-
-.contact-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.contact-form {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
-}
-
-.social-links {
-    margin-bottom: 20px;
-}
-
-.social-links a {
-    font-size: 2rem;
-    color: var(--prussian-blue-color);
-    margin: 0 15px;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--fulvous-color);
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid var(--prussian-blue-color);
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #333;
-}
-
-.contact-form button {
-    width: 100%;
-    background-color: var(--prussian-blue-color);
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #D57E0B;
-}
-
-/* End of Contact Session */
 
 /* Footer Section */
 .footer-section {

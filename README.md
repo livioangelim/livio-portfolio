@@ -8,8 +8,6 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 - **Interactive Navbar**: A sticky and interactive navbar for smooth navigation through different sections of the website.
 - **Skills Section with Accordion Animation**: This section presents my technical skills, grouped into categories such as programming languages, frameworks, and cloud tools. Each category is collapsible to enhance user experience and maintain focus.
 - **Project Section**: Showcases some of the real-world projects I’ve worked on, complete with project descriptions, links, and technologies used.
-- **Contact Section**: Allows visitors to get in touch with me via a contact form or through my social media profiles, including LinkedIn and GitHub.
-- **Downloadable Resume**: Visitors can download my latest resume in PDF format.
 - **Smooth Scroll & Transitions**: Smooth scrolling experience and CSS transitions to give a modern and fluid feel to the site.
 
 ## Technologies Used
