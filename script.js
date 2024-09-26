@@ -11,7 +11,7 @@ const sections = document.querySelectorAll("section");
 // Function to handle scrolling and sticky navbar
 const mainFn = () => {
     // Sticky Navbar
-    if (window.scrollY >= navbarOffsetTop) {
+    if (window.scrollY >= navbarOffsetTop || window.scrollY === 0) {
         navbar.classList.add("sticky");
     } else {
         navbar.classList.remove("sticky");
@@ -26,6 +26,8 @@ const mainFn = () => {
             navbarLinks[i].classList.add("active");
         }
     });
+
+
 };
 
 // Smooth Scroll Functionality for Navbar Links
@@ -47,9 +49,25 @@ navbarLinks.forEach(link => {
     });
 });
 
+// Skills Section: Accordion Behavior
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+
+        // Toggle the display of the content
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
+        // Optionally, you could hide other sections when one is opened
+        document.querySelectorAll('.accordion-content').forEach(item => {
+            if (item !== content) {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
 
 // Event listener for scrolling
 window.addEventListener("scroll", mainFn);
 
 // Initial call to set up the page correctly on load
-mainFn();
+window.addEventListener('load', mainFn);
