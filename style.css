@@ -594,6 +594,138 @@ a:hover {
     transform: translateY(-2px);
 }
 
+/* Contact Section */
+.contact-section {
+    padding: 8rem 0;
+    background-color: var(--navy-color);
+}
+
+.contact-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-text p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-item i {
+    color: var(--turquoise-color);
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-form-container {
+    flex: 1;
+    background-color: var(--light-navy-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--lightest-slate-color);
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem 1rem;
+    background-color: var(--lightest-navy-color);
+    border: 1px solid var(--slate-color);
+    border-radius: 5px;
+    color: var(--light-slate-color);
+    font-family: var(--body-font);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--turquoise-color);
+}
+
+.submit-btn {
+    padding: 1rem;
+    background-color: transparent;
+    color: var(--turquoise-color);
+    border: 1px solid var(--turquoise-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--heading-font);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: rgba(63, 224, 208, 0.1);
+    transform: translateY(-3px);
+}
+
+.form-status {
+    margin-top: 1.5rem;
+}
+
+.success-message,
+.error-message {
+    padding: 0.8rem;
+    border-radius: 5px;
+    display: none;
+}
+
+.success-message {
+    background-color: rgba(39, 174, 96, 0.2);
+    color: #27ae60;
+    border: 1px solid #27ae60;
+}
+
+.error-message {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+/* Media Queries for Contact Section */
+@media screen and (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+}
+
 /* Footer */
 .footer-section {
     background-color: var(--deep-blue-color);

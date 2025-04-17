@@ -2,9 +2,35 @@
 <html lang="en" data-language="en">
 
 <head>
-    <!-- Meta Tags for Responsive Design and Character Encoding -->
+    <!-- Meta Tags for Responsive Design, Character Encoding, and SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Livio A. Mororo - Software Engineer specializing in Java, Python, and full-stack development with expertise in cloud technologies and AI solutions." />
+    <meta name="keywords"
+        content="Software Engineer, Java Developer, Python Developer, Full Stack Developer, Spring Boot, Angular, React, AWS, Docker, Kubernetes, Machine Learning, Portfolio" />
+    <meta name="author" content="Livio A. Mororo" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Livio A.M. - Software Engineer Portfolio" />
+    <meta property="og:description"
+        content="Java, Python, and Full-stack developer with expertise in building scalable, efficient applications and cloud solutions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://livioangelim.github.io/livio-portfolio/" />
+    <meta property="og:image" content="https://livioangelim.github.io/livio-portfolio/images/livio.jpg" />
+    <meta property="og:site_name" content="Livio Angelim Portfolio" />
+
+    <!-- Twitter Card Data -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Livio A.M. - Software Engineer" />
+    <meta name="twitter:description"
+        content="Java, Python, and Full-stack developer specializing in enterprise applications & cloud solutions." />
+    <meta name="twitter:image" content="https://livioangelim.github.io/livio-portfolio/images/livio.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://livioangelim.github.io/livio-portfolio/" />
+
     <title data-translate-key="page_title">Livio A. M. - Software Engineer</title>
 
     <!-- External CSS Stylesheet -->
@@ -64,6 +90,7 @@
                 <a href="#about" class="navbar-link" data-translate-key="nav_about">About</a>
                 <a href="#skills" class="navbar-link" data-translate-key="nav_skills">Skills</a>
                 <a href="#projects" class="navbar-link" data-translate-key="nav_projects">Projects</a>
+                <a href="#contact" class="navbar-link" data-translate-key="nav_contact">Contact</a>
             </div>
             <div class="language-switcher">
                 <button class="lang-btn active" data-language="en">EN</button>
@@ -228,6 +255,64 @@
         </div>
     </section>
     <!-- End of Projects Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section container">
+        <h2 class="section-title" data-translate-key="contact_title">Contact Me</h2>
+        <div class="contact-content">
+            <div class="contact-text">
+                <p data-translate-key="contact_intro">I'm always open to discussing new projects, creative ideas or
+                    opportunities to be part of your vision. Feel free to reach out using the form or via direct email.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>it.livioam@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-translate-key="contact_location">Montreal, CAN</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/livioangelim/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/livioangelim" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/livioangelim" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-translate-key="contact_name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate-key="contact_email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-translate-key="contact_subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-translate-key="contact_message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" data-translate-key="contact_submit">Send Message</button>
+                </form>
+                <div id="formStatus" class="form-status">
+                    <div class="success-message" data-translate-key="contact_success">
+                        Thank you! Your message has been sent successfully.
+                    </div>
+                    <div class="error-message" data-translate-key="contact_error">
+                        Oops! Something went wrong. Please try again later.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Contact Section -->
 
     <!-- Project Detail Modal -->
     <div class="project-modal" id="projectModal">

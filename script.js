@@ -1,6 +1,6 @@
 /**
  * Main JavaScript file for Livio's portfolio website
- * Handles language switching, smooth scrolling, accordion toggles, and project display
+ * Handles language switching, smooth scrolling, accordion toggles, project display, and contact form handling
  */
 
 // Global variable to store current language
@@ -239,6 +239,73 @@ document.querySelectorAll('.accordion-header').forEach(header => {
         }
     });
 });
+
+// Contact form handling
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+const successMessage = document.querySelector('.success-message');
+const errorMessage = document.querySelector('.error-message');
+
+// Handle form submission
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        // Simple validation
+        if (!name || !email || !subject || !message) {
+            showFormError();
+            return;
+        }
+
+        // In a real implementation, you would send this data to a server
+        // For now, we'll simulate a successful submission
+
+        // Show loading state
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
+
+        // Simulate server delay
+        setTimeout(() => {
+            // Reset form
+            contactForm.reset();
+
+            // Show success message
+            showFormSuccess();
+
+            // Reset button
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 1500);
+    });
+}
+
+function showFormSuccess() {
+    successMessage.style.display = 'block';
+    errorMessage.style.display = 'none';
+
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 5000);
+}
+
+function showFormError() {
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'block';
+
+    // Hide error message after 5 seconds
+    setTimeout(() => {
+        errorMessage.style.display = 'none';
+    }, 5000);
+}
 
 // ===== INITIALIZATION =====
 

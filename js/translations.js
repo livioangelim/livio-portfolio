@@ -14,6 +14,7 @@ const translations = {
         nav_about: "About",
         nav_skills: "Skills",
         nav_projects: "Projects",
+        nav_contact: "Contact",
 
         // Hero section
         hero_greeting: "Hi, I'm <span>Livio</span>",
@@ -46,6 +47,18 @@ const translations = {
         project_demo: "Live Demo",
         project_video: "Watch Video",
 
+        // Contact section
+        contact_title: "Contact Me",
+        contact_intro: "I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision. Feel free to reach out using the form or via direct email.",
+        contact_location: "Montreal, CAN",
+        contact_name: "Name",
+        contact_email: "Email",
+        contact_subject: "Subject",
+        contact_message: "Message",
+        contact_submit: "Send Message",
+        contact_success: "Thank you! Your message has been sent successfully.",
+        contact_error: "Oops! Something went wrong. Please try again later.",
+
         // Footer
         footer_copyright: "&copy; 2025 Livio A.M. All Rights Reserved."
     },
@@ -60,6 +73,7 @@ const translations = {
         nav_about: "À Propos",
         nav_skills: "Compétences",
         nav_projects: "Projets",
+        nav_contact: "Contact",
 
         // Hero section
         hero_greeting: "Bonjour, je suis <span>Livio</span>",
@@ -92,6 +106,18 @@ const translations = {
         project_demo: "Démo en Direct",
         project_video: "Regarder la Vidéo",
 
+        // Contact section
+        contact_title: "Contactez-Moi",
+        contact_intro: "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités de faire partie de votre vision. N'hésitez pas à me contacter en utilisant le formulaire ou par email direct.",
+        contact_location: "Montréal, CAN",
+        contact_name: "Nom",
+        contact_email: "Email",
+        contact_subject: "Sujet",
+        contact_message: "Message",
+        contact_submit: "Envoyer le Message",
+        contact_success: "Merci ! Votre message a été envoyé avec succès.",
+        contact_error: "Oups ! Quelque chose s'est mal passé. Veuillez réessayer plus tard.",
+
         // Footer
         footer_copyright: "&copy; 2025 Livio A.M. Tous Droits Réservés."
     },
@@ -106,6 +132,7 @@ const translations = {
         nav_about: "Sobre",
         nav_skills: "Habilidades",
         nav_projects: "Projetos",
+        nav_contact: "Contato",
 
         // Hero section
         hero_greeting: "Olá, eu sou <span>Livio</span>",
@@ -138,6 +165,18 @@ const translations = {
         project_demo: "Demo ao Vivo",
         project_video: "Assistir Vídeo",
 
+        // Contact section
+        contact_title: "Contate-me",
+        contact_intro: "Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte da sua visão. Sinta-se à vontade para entrar em contato usando o formulário ou via email direto.",
+        contact_location: "Montreal, CAN",
+        contact_name: "Nome",
+        contact_email: "Email",
+        contact_subject: "Assunto",
+        contact_message: "Mensagem",
+        contact_submit: "Enviar Mensagem",
+        contact_success: "Obrigado! Sua mensagem foi enviada com sucesso.",
+        contact_error: "Ops! Algo deu errado. Por favor, tente novamente mais tarde.",
+
         // Footer
         footer_copyright: "&copy; 2025 Livio A.M. Todos os Direitos Reservados."
     },
@@ -152,6 +191,7 @@ const translations = {
         nav_about: "Sobre Mí",
         nav_skills: "Habilidades",
         nav_projects: "Proyectos",
+        nav_contact: "Contacto",
 
         // Hero section
         hero_greeting: "Hola, soy <span>Livio</span>",
@@ -183,6 +223,18 @@ const translations = {
         project_docs: "Documentación",
         project_demo: "Demo en Vivo",
         project_video: "Ver Vídeo",
+
+        // Contact section
+        contact_title: "Contáctame",
+        contact_intro: "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tu visión. No dudes en ponerte en contacto utilizando el formulario o mediante correo electrónico directo.",
+        contact_location: "Montreal, CAN",
+        contact_name: "Nombre",
+        contact_email: "Correo",
+        contact_subject: "Asunto",
+        contact_message: "Mensaje",
+        contact_submit: "Enviar Mensaje",
+        contact_success: "¡Gracias! Tu mensaje ha sido enviado con éxito.",
+        contact_error: "¡Ups! Algo salió mal. Por favor, inténtalo de nuevo más tarde.",
 
         // Footer
         footer_copyright: "&copy; 2025 Livio A.M. Todos los Derechos Reservados."
