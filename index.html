@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-language="en">
 
 <head>
     <!-- Meta Tags for Responsive Design and Character Encoding -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Livio A. M. - Software Engineer</title>
+    <title data-translate-key="page_title">Livio A. M. - Software Engineer</title>
 
     <!-- External CSS Stylesheet -->
     <link rel="stylesheet" href="style.css" />
@@ -30,8 +30,8 @@
         <!-- Hero Section -->
         <div class="hero container">
             <div class="hero-text">
-                <h1>Hi, I'm <span>Livio</span></h1>
-                <h2>Software Engineer</h2>
+                <h1 data-translate-key="hero_greeting">Hi, I'm <span>Livio</span></h1>
+                <h2 data-translate-key="hero_title">Software Engineer</h2>
             </div>
             <div class="hero-image">
                 <!-- SVG code for logo -->
@@ -59,40 +59,54 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
-            <a href="#header" class="navbar-link">Home</a>
-            <a href="#about" class="navbar-link">About</a>
-            <a href="#skills" class="navbar-link">Skills</a>
-            <a href="#projects" class="navbar-link">Projects</a>
+            <div class="nav-links">
+                <a href="#header" class="navbar-link" data-translate-key="nav_home">Home</a>
+                <a href="#about" class="navbar-link" data-translate-key="nav_about">About</a>
+                <a href="#skills" class="navbar-link" data-translate-key="nav_skills">Skills</a>
+                <a href="#projects" class="navbar-link" data-translate-key="nav_projects">Projects</a>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-language="en">EN</button>
+                <button class="lang-btn" data-language="fr">FR</button>
+                <button class="lang-btn" data-language="pt">PT</button>
+                <button class="lang-btn" data-language="es">ES</button>
+            </div>
         </div>
     </nav>
     <!-- End of Navbar -->
 
     <!-- About Section -->
     <section id="about" class="about-section container">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title" data-translate-key="about_title">About Me</h2>
         <div class="about-content">
             <div class="about-image">
                 <img src="images/livio.jpg" alt="About Livio">
             </div>
             <div class="about-text">
-                <p>Hi, I'm Livio A. Mororo! A <strong>problem-solving Software Engineer</strong> with a
-                    <strong>Bachelor’s in Computer Science</strong> and a track record of building scalable systems that
+                <p data-translate-key="about_intro">Hi, I'm Livio A. Mororo! A <strong>problem-solving Software
+                        Engineer</strong> with a
+                    <strong>Bachelor's in Computer Science</strong> and a track record of building scalable systems that
                     drive efficiency. My expertise spans:
                 </p>
 
                 <ul style="margin: 0 auto 1.5rem; width: 90%; max-width: 800px;">
-                    <li><strong>Backend Development</strong>: Architecting Java/Spring Boot APIs with 99.8%
+                    <li data-translate-key="about_backend"><strong>Backend Development</strong>: Architecting
+                        Java/Spring Boot APIs with 99.8%
                         reliability for enterprise apps.</li>
-                    <li><strong>Data-Driven Solutions</strong>: Building Python/ML tools like a loan eligibility
+                    <li data-translate-key="about_data"><strong>Data-Driven Solutions</strong>: Building Python/ML tools
+                        like a loan eligibility
                         predictor that cut processing time from 5 days to 2 seconds.</li>
-                    <li><strong>Full-Stack Agility</strong>: Crafting Angular/React frontends paired with MySQL
+                    <li data-translate-key="about_fullstack"><strong>Full-Stack Agility</strong>: Crafting Angular/React
+                        frontends paired with MySQL
                         databases for seamless user experiences.</li>
                 </ul>
 
-                <p>I thrive in fast-paced environments where <strong>innovation meets execution</strong>. Whether
-                    automating cloud deployments with Docker or debugging high-stakes systems, I’m driven by turning
+                <p data-translate-key="about_environments">I thrive in fast-paced environments where <strong>innovation
+                        meets execution</strong>. Whether
+                    automating cloud deployments with Docker or debugging high-stakes systems, I'm driven by turning
                     complex challenges into elegant solutions.</p>
-                <p><strong>Let’s collaborate to build something impactful!</strong></p>
+                <p data-translate-key="about_callout"><strong>Let's collaborate to build something impactful!</strong>
+                </p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/livioangelim/" target="_blank"><i
                             class="fab fa-linkedin"></i></a>
@@ -106,13 +120,14 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
-        <h2 class="section-title">My Skills</h2>
+        <h2 class="section-title" data-translate-key="skills_title">My Skills</h2>
 
         <div class="accordion">
 
             <!-- Programming Languages -->
             <div class="accordion-item">
-                <h3 class="accordion-header">Programming Languages</h3>
+                <h3 class="accordion-header" data-translate-key="skills_programming_languages">Programming Languages
+                </h3>
                 <div class="accordion-content">
                     <span>C++</span>
                     <span>Java</span>
@@ -124,7 +139,7 @@
 
             <!-- Web Technologies -->
             <div class="accordion-item">
-                <h3 class="accordion-header">Web Technologies</h3>
+                <h3 class="accordion-header" data-translate-key="skills_web_technologies">Web Technologies</h3>
                 <div class="accordion-content">
                     <span>HTML5</span>
                     <span>CSS3</span>
@@ -135,7 +150,7 @@
 
             <!-- Frameworks and Libraries -->
             <div class="accordion-item">
-                <h3 class="accordion-header">Frameworks and Libraries</h3>
+                <h3 class="accordion-header" data-translate-key="skills_frameworks">Frameworks and Libraries</h3>
                 <div class="accordion-content">
                     <span>Spring</span>
                     <span>Hibernate</span>
@@ -146,7 +161,7 @@
 
             <!-- Database Management -->
             <div class="accordion-item">
-                <h3 class="accordion-header">Database Management</h3>
+                <h3 class="accordion-header" data-translate-key="skills_database">Database Management</h3>
                 <div class="accordion-content">
                     <span>MySQL</span>
                     <span>SQL Server</span>
@@ -157,7 +172,7 @@
 
             <!-- Operating Systems -->
             <div class="accordion-item">
-                <h3 class="accordion-header">Operating Systems</h3>
+                <h3 class="accordion-header" data-translate-key="skills_os">Operating Systems</h3>
                 <div class="accordion-content">
                     <span>iOS</span>
                     <span>Linux</span>
@@ -167,7 +182,7 @@
 
             <!-- Software Development -->
             <div class="accordion-item">
-                <h3 class="accordion-header">Software Development</h3>
+                <h3 class="accordion-header" data-translate-key="skills_software_dev">Software Development</h3>
                 <div class="accordion-content">
                     <span>Object-Oriented Programming (OOP)</span>
                     <span>Agile Development (Scrum, Kanban)</span>
@@ -180,7 +195,7 @@
 
             <!-- Cloud and Virtualization -->
             <div class="accordion-item">
-                <h3 class="accordion-header">Cloud and Virtualization</h3>
+                <h3 class="accordion-header" data-translate-key="skills_cloud">Cloud and Virtualization</h3>
                 <div class="accordion-content">
                     <span>AWS</span>
                     <span>Docker</span>
@@ -191,7 +206,7 @@
 
             <!-- Scripting and Automation -->
             <div class="accordion-item">
-                <h3 class="accordion-header">Scripting and Automation</h3>
+                <h3 class="accordion-header" data-translate-key="skills_scripting">Scripting and Automation</h3>
                 <div class="accordion-content">
                     <span>Bash</span>
                     <span>PowerShell</span>
@@ -207,58 +222,48 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section container">
-        <h2 class="section-title">My Projects</h2>
-        <div class="projects-grid">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <img src="images/pic1.jpg" alt="Project 1">
-                <div class="project-info">
-                    <h3>Global Application Suite</h3>
-                    <p>Java / Spring / Maven / Docker<br>TypeScript / Angular</p>
-                    <a href="https://github.com/livioangelim/global-application-suite" class="btn"
-                        target="_blank">Repository</a>
-                </div>
-            </div>
-            <!-- Project Card 2 -->
-            <div class="project-card">
-                <img src="images/pic2.jpg" alt="Project 2">
-                <div class="project-info">
-                    <h3>EduFlow System</h3>
-                    <p>C++ / SQLite / REST</p>
-                    <a href="https://github.com/livioangelim/eduflow-system" class="btn" target="_blank">Repository</a>
-                </div>
-            </div>
-            <!-- Project Card 3 -->
-            <div class="project-card">
-                <img src="images/pic3.jpg" alt="Project 2">
-                <div class="project-info">
-                    <h3>Loan Eligibility Checker</h3>
-                    <p>Python / Flask / Machine Learning / NumPy</p>
-                    <a href="https://github.com/livioangelim/loan-eligibility-checker" class="btn"
-                        target="_blank">Repository</a>
-                </div>
-            </div>
-            <!-- Project Card 4 -->
-            <div class="project-card">
-                <img src="images/pic4.jpg" alt="Project 2">
-                <div class="project-info">
-                    <h3>Global Application Suite</h3>
-                    <p>Java / Spring / Angular / TypeScript / Docker / Maven</p>
-                    <a href="https://github.com/livioangelim/global-application-suite" class="btn"
-                        target="_blank">Repository</a>
-                </div>
-            </div>
+        <h2 class="section-title" data-translate-key="projects_title">My Projects</h2>
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Project cards will be dynamically generated by JavaScript -->
         </div>
     </section>
     <!-- End of Projects Section -->
 
+    <!-- Project Detail Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="project-media">
+                    <!-- Image or video will be inserted here -->
+                </div>
+                <h3 class="project-title"></h3>
+                <div class="project-description"></div>
+                <div class="project-tech-stack"></div>
+                <div class="project-links">
+                    <a href="#" class="repo-link btn" target="_blank" data-translate-key="project_repo">Repository</a>
+                    <a href="#" class="docs-link btn" target="_blank"
+                        data-translate-key="project_docs">Documentation</a>
+                    <a href="#" class="demo-link btn" target="_blank" data-translate-key="project_demo">Live Demo</a>
+                    <a href="#" class="video-link btn" target="_blank" data-translate-key="project_video">Watch
+                        Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Project Detail Modal -->
+
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
-            <p>&copy; 2025 Livio A.M. All Rights Reserved.</p>
+            <p data-translate-key="footer_copyright">&copy; 2025 Livio A.M. All Rights Reserved.</p>
         </div>
     </footer>
     <!-- End of Footer Section -->
+
+    <!-- Translation and Project Data Files -->
+    <script src="js/translations.js"></script>
+    <script src="js/projects.js"></script>
 
     <!-- External JavaScript File -->
     <script src="script.js"></script>
