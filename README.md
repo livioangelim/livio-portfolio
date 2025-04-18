@@ -6,7 +6,7 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 
 - **Responsive Design**: The portfolio is fully responsive, ensuring it looks great on any device, including desktops, tablets, and mobile phones.
 - **Interactive Navbar**: A sticky and interactive navbar for smooth navigation through different sections of the website.
-- **Skills Section with Accordion Animation**: This section presents my technical skills, grouped into categories such as programming languages, frameworks, and cloud tools. Each category is collapsible to enhance user experience and maintain focus.
+- **Combined Hero & Bio Section**: An engaging introduction with an animated expandable bio that reveals detailed professional information when hovered.
 - **Project Section**: Showcases some of the real-world projects I've worked on, complete with project descriptions, links, and technologies used.
 - **Smooth Scroll & Transitions**: Smooth scrolling experience and CSS transitions to give a modern and fluid feel to the site.
 - **Multilingual Support**: Full website translation in English, French, Portuguese, and Spanish with language preference persistence.
@@ -14,7 +14,6 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 - **Dark/Light Theme Toggle**: A customizable theme system allowing users to switch between dark and light modes, with preference saved for future visits.
 - **Project Filtering System**: Advanced filtering capabilities to sort projects by technology, type, or category for easier navigation.
 - **Lazy Loading**: Performance optimization through lazy loading of images and videos, improving page load speed and user experience.
-- **Contact Form**: A dedicated contact section with a functional form for potential clients or employers to reach out directly.
 - **SEO Optimized**: Comprehensive metadata including Open Graph and Twitter Card support for better search engine visibility and social sharing.
 
 ## Recent Improvements
@@ -92,6 +91,21 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 - Optimized to refresh lazy loading for dynamically added content
 - Added placeholder images during the loading process
 
+### April 2025 Update - Phase 3: UI Refinement
+
+#### 1. Combined Hero and About Sections
+- Merged the Home and About sections into a single cohesive section for a more streamlined experience
+- Added an elegant expandable bio that reveals detailed professional information when hovering for 1 second
+- Placed the rectangular profile image with animated border effect on the right side
+- Emphasized key skills and qualifications with highlighted turquoise text
+- Maintained full multilingual support for the expanded bio content
+
+#### 2. Streamlined Contact Section
+- Simplified the contact section to focus on essential communication channels
+- Enhanced the social media icons (LinkedIn and GitHub) with larger size and improved spacing
+- Added a clickable email link with color transition effect on hover
+- Removed the contact form for a cleaner, more direct approach to communication
+
 ## Technologies Used
 
 - **HTML5, CSS3, JavaScript**: For building the structure, layout, and interactions.
@@ -101,29 +115,17 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 
 ## Sections Overview
 
-### 1. **Hero Section**
-The hero section includes a welcoming message, introducing myself as a **Software Engineer**. It features my animated logo and is fully translated in all supported languages.
+### 1. **Hero Section with Expandable Bio**
+The hero section features a welcoming message introducing myself as a **Software Engineer** along with my profile image. When hovering over the introduction text for one second, it expands to reveal a comprehensive bio highlighting my dual background in **Computer Science** and **Social Communication - Journalism**, my work in **AI/ML development**, **cloud-native architectures**, and my transition from journalism to software engineering.
 
-### 2. **About Me**
-A brief introduction detailing my professional background, including skills in **Java, Python, C++, and JavaScript**. This section highlights my experience in both front-end and back-end development. It also includes social media icons for LinkedIn, GitHub and email, allowing people to connect with me on professional platforms.
-
-### 3. **Skills Section**
-This section uses an accordion to present my skills in an organized manner. It covers the following categories:
-
-- **Programming Languages**: C++, Java, JavaScript, Python, TypeScript
-- **Web Technologies**: HTML5, CSS3, Angular, React
-- **Frameworks and Libraries**: Spring, Hibernate, Pandas, NumPy
-- **Database Management**: MySQL, SQL Server, PostgreSQL, JPA/Hibernate
-- **Operating Systems**: iOS, Linux, Windows
-- **Software Development**: Object-Oriented Programming (OOP), Agile Development (Scrum, Kanban), Version Control (Git, GitHub), RESTful APIs, Test-Driven Development (TDD), Continuous Integration/Continuous Deployment (CI/CD)
-- **Cloud and Virtualization**: AWS, Docker, Kubernetes, Azure
-- **Scripting and Automation**: Bash, PowerShell, Ansible, Terraform, Jenkins, Postman
-
-### 4. **Projects Section**
+### 2. **Projects Section**
 A collection of projects with detailed descriptions, challenges faced, solutions implemented, technology stacks, and links to repositories, documentation, demos, and videos where available. Each project is presented in a card format with a detailed view accessible through interaction.
 
-### 5. **Contact Section**
-A dedicated section that allows visitors to get in touch directly through a form. It includes my email address, location information, and additional social media links.
+### 3. **Articles Section**
+A showcase of my technical articles covering topics in software engineering, AI, and technology trends. The articles are filterable by topic and include links to the original publications.
+
+### 4. **Contact Section**
+A streamlined section that provides my direct contact information, including email address and location, along with links to my professional profiles on LinkedIn and GitHub.
 
 ## Planned Future Improvements
 
@@ -164,7 +166,7 @@ The portfolio is publicly accessible online. You can explore the live version by
 ## Project Structure
 
 ```
-lvo-portfolio/
+livio-portfolio/
 ├── js/
 │   ├── translations.js     # Stores text translations
 │   ├── articles.js         # Articles data
@@ -172,13 +174,12 @@ lvo-portfolio/
 │   ├── lazyLoad.js         # Lazy Loading implementation
 │   └── script.js           # Main JavaScript functionality
 ├── images/
-│   ├── Articles/           # Image assets subdirectory for articles
+│   ├── articles/           # Image assets subdirectory for articles
 │   ├── projects/           # Image assets subdirectory for projects   
 │   ├── lvo-dark.jpg        # Logo file
 │   ├── lvo-light.jpg       # Logo file
 │   └── livio.jpg           # Profile picture
-├── css/
-│   └── style.css           # Main CSS styles
+├── style.css               # Main CSS styles
 ├── index.html              # Main HTML file (the single page)
 └── README.md               # Project documentation file
 ```
