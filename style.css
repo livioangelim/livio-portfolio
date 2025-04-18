@@ -8,6 +8,7 @@
 
 /* Variables */
 :root {
+    /* Dark theme colors (default) */
     --turquoise-color: #3fe0d0;
     --prussian-blue-color: #0d2b45;
     --deep-blue-color: #112240;
@@ -19,17 +20,49 @@
     --lightest-slate-color: #ccd6f6;
     --white-color: #e6f1ff;
     --highlight-color: #64ffda;
+    --bg-primary: var(--navy-color);
+    --bg-secondary: var(--deep-blue-color);
+    --bg-tertiary: var(--light-navy-color);
+    --bg-quaternary: var(--lightest-navy-color);
+    --text-primary: var(--white-color);
+    --text-secondary: var(--lightest-slate-color);
+    --text-tertiary: var(--light-slate-color);
+    --border-color: var(--lightest-navy-color);
+    --card-bg: var(--light-navy-color);
+    --modal-bg: var(--light-navy-color);
+    --form-bg: var(--lightest-navy-color);
 
+    /* Font Variables */
     --heading-font: 'Kanit', sans-serif;
     --body-font: 'Inter', sans-serif;
     --secondary-font: 'Inria Sans', sans-serif;
 
+    /* Animation Variables */
     --transition-speed: 0.3s;
     --normal-curve: cubic-bezier(0.4, 0, 0.2, 1);
     --fast-curve: cubic-bezier(0.075, 0.82, 0.165, 1);
 
+    /* Shadow Variables */
     --shadow-light: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
     --shadow-medium: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --turquoise-color: #0e8a7d;
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #e9e9e9;
+    --bg-tertiary: #ffffff;
+    --bg-quaternary: #f0f0f0;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-tertiary: #718096;
+    --border-color: #cbd5e0;
+    --card-bg: #ffffff;
+    --modal-bg: #ffffff;
+    --form-bg: #f5f5f5;
+    --shadow-light: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 20px 30px -15px rgba(0, 0, 0, 0.15);
 }
 
 /* Base Styles */
@@ -38,11 +71,13 @@ html {
 }
 
 body {
-    background-color: var(--navy-color);
-    color: var(--lightest-slate-color);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
     line-height: 1.6;
     min-height: 100vh;
     position: relative;
+    transition: background-color var(--transition-speed) var(--normal-curve),
+        color var(--transition-speed) var(--normal-curve);
 }
 
 h1,
@@ -53,13 +88,15 @@ h5,
 h6 {
     font-family: var(--heading-font);
     font-weight: 600;
-    color: var(--white-color);
+    color: var(--text-primary);
+    transition: color var(--transition-speed) var(--normal-curve);
 }
 
 p {
     margin-bottom: 1.5rem;
-    color: var(--light-slate-color);
+    color: var(--text-tertiary);
     font-size: 1.1rem;
+    transition: color var(--transition-speed) var(--normal-curve);
 }
 
 a {
@@ -79,13 +116,42 @@ a:hover {
     padding: 0 1rem;
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+    margin-left: 1rem;
+}
+
+#themeToggle {
+    background: transparent;
+    border: none;
+    color: var(--text-tertiary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color var(--transition-speed) var(--normal-curve),
+        transform var(--transition-speed) var(--normal-curve);
+    padding: 0.3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#themeToggle:hover {
+    color: var(--turquoise-color);
+    transform: rotate(15deg);
+}
+
+#themeToggle:focus {
+    outline: none;
+}
+
 /* Section Styling */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2.5rem;
     position: relative;
-    color: var(--white-color);
+    color: var(--text-primary);
 }
 
 .section-title::after {
@@ -105,7 +171,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--navy-color);
+    background-color: var(--bg-primary);
     position: relative;
     overflow: hidden;
 }
@@ -142,7 +208,7 @@ a:hover {
     animation: fadeInUp 1s ease 0.3s forwards;
     font-weight: 400;
     font-family: var(--secondary-font);
-    color: var(--lightest-slate-color);
+    color: var(--text-secondary);
 }
 
 .hero-image {
@@ -189,7 +255,7 @@ a:hover {
 .navbar-link {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--light-slate-color);
+    color: var(--text-tertiary);
     transition: color 0.3s ease;
     position: relative;
     padding: 0.5rem 0;
@@ -224,8 +290,8 @@ a:hover {
 
 .lang-btn {
     background: transparent;
-    border: 1px solid var(--lightest-navy-color);
-    color: var(--light-slate-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-tertiary);
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
     cursor: pointer;
@@ -240,7 +306,7 @@ a:hover {
 
 .lang-btn.active {
     background-color: var(--turquoise-color);
-    color: var(--navy-color);
+    color: var(--bg-primary);
     border-color: var(--turquoise-color);
     font-weight: 600;
 }
@@ -248,7 +314,7 @@ a:hover {
 /* About Section */
 .about-section {
     padding: 8rem 0;
-    background-color: var(--navy-color);
+    background-color: var(--bg-primary);
 }
 
 .about-content {
@@ -315,7 +381,7 @@ a:hover {
     margin-bottom: 1rem;
     padding-left: 1.5rem;
     position: relative;
-    color: var(--light-slate-color);
+    color: var(--text-tertiary);
 }
 
 .about-text li::before {
@@ -333,7 +399,7 @@ a:hover {
 
 .social-links a {
     font-size: 1.5rem;
-    color: var(--light-slate-color);
+    color: var(--text-tertiary);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -345,7 +411,7 @@ a:hover {
 /* Skills Section */
 .skills-section {
     padding: 8rem 0;
-    background-color: var(--deep-blue-color);
+    background-color: var(--bg-secondary);
 }
 
 .accordion {
@@ -357,7 +423,7 @@ a:hover {
     border-radius: 8px;
     margin-bottom: 1rem;
     overflow: hidden;
-    background-color: var(--light-navy-color);
+    background-color: var(--bg-tertiary);
     box-shadow: var(--shadow-light);
     transition: box-shadow 0.3s ease;
 }
@@ -367,8 +433,8 @@ a:hover {
 }
 
 .accordion-header {
-    background-color: var(--light-navy-color);
-    color: var(--white-color);
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
     padding: 1rem 1.5rem;
     cursor: pointer;
     display: flex;
@@ -394,7 +460,7 @@ a:hover {
     max-height: 0;
     overflow: hidden;
     padding: 0 1.5rem;
-    background-color: var(--lightest-navy-color);
+    background-color: var(--bg-quaternary);
     transition: max-height 0.5s ease, padding 0.3s ease;
 }
 
@@ -405,8 +471,8 @@ a:hover {
 
 .accordion-content span {
     display: inline-block;
-    background-color: var(--navy-color);
-    color: var(--light-slate-color);
+    background-color: var(--bg-primary);
+    color: var(--text-tertiary);
     padding: 0.5rem 1rem;
     margin: 0.5rem 0.5rem 0.5rem 0;
     border-radius: 20px;
@@ -416,13 +482,13 @@ a:hover {
 
 .accordion-content span:hover {
     background-color: var(--turquoise-color);
-    color: var(--navy-color);
+    color: var(--bg-primary);
 }
 
 /* Projects Section */
 .projects-section {
     padding: 8rem 0;
-    background-color: var(--navy-color);
+    background-color: var(--bg-primary);
 }
 
 .projects-grid {
@@ -432,7 +498,7 @@ a:hover {
 }
 
 .project-card {
-    background-color: var(--light-navy-color);
+    background-color: var(--card-bg);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow-light);
@@ -465,7 +531,7 @@ a:hover {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 600;
-    color: var(--white-color);
+    color: var(--text-primary);
 }
 
 .project-card-tech {
@@ -478,7 +544,7 @@ a:hover {
 
 .project-card-tech span {
     font-size: 0.75rem;
-    color: var(--light-slate-color);
+    color: var(--text-tertiary);
     white-space: nowrap;
 }
 
@@ -498,7 +564,7 @@ a:hover {
 }
 
 .modal-content {
-    background-color: var(--light-navy-color);
+    background-color: var(--modal-bg);
     margin: 1rem auto;
     width: 90%;
     max-width: 900px;
@@ -509,7 +575,7 @@ a:hover {
 }
 
 .close-modal {
-    color: var(--light-slate-color);
+    color: var(--text-tertiary);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -547,12 +613,12 @@ a:hover {
 .project-title {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: var(--white-color);
+    color: var(--text-primary);
 }
 
 .project-description {
     margin-bottom: 2rem;
-    color: var(--light-slate-color);
+    color: var(--text-tertiary);
     line-height: 1.7;
 }
 
@@ -564,7 +630,7 @@ a:hover {
 }
 
 .project-tech-stack span {
-    background-color: var(--navy-color);
+    background-color: var(--bg-primary);
     color: var(--turquoise-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -597,7 +663,7 @@ a:hover {
 /* Contact Section */
 .contact-section {
     padding: 8rem 0;
-    background-color: var(--navy-color);
+    background-color: var(--bg-primary);
 }
 
 .contact-content {
@@ -633,7 +699,7 @@ a:hover {
 
 .contact-form-container {
     flex: 1;
-    background-color: var(--light-navy-color);
+    background-color: var(--form-bg);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--shadow-medium);
@@ -652,19 +718,25 @@ a:hover {
 }
 
 .form-group label {
-    color: var(--lightest-slate-color);
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
 .form-group input,
 .form-group textarea {
     padding: 0.8rem 1rem;
-    background-color: var(--lightest-navy-color);
-    border: 1px solid var(--slate-color);
+    background-color: var(--form-bg);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
-    color: var(--light-slate-color);
+    color: var(--text-tertiary);
     font-family: var(--body-font);
     transition: border-color 0.3s ease;
+}
+
+/* Dark theme specific border color for form inputs */
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    border-color: var(--slate-color);
 }
 
 .form-group input:focus,
@@ -728,7 +800,7 @@ a:hover {
 
 /* Footer */
 .footer-section {
-    background-color: var(--deep-blue-color);
+    background-color: var(--bg-secondary);
     padding: 2rem 0;
     text-align: center;
     position: relative;

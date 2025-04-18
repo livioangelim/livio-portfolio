@@ -1,10 +1,12 @@
 /**
  * Main JavaScript file for Livio's portfolio website
- * Handles language switching, smooth scrolling, accordion toggles, project display, and contact form handling
+ * Handles language switching, smooth scrolling, accordion toggles, project display, contact form handling,
+ * and theme switching
  */
 
-// Global variable to store current language
+// Global variables
 let currentLanguage = 'en';
+let currentTheme = 'dark'; // Default theme
 
 // DOM Elements
 const projectsGrid = document.getElementById('projectsGrid');
@@ -12,6 +14,33 @@ const projectModal = document.getElementById('projectModal');
 const closeModalBtn = document.querySelector('.close-modal');
 const langButtons = document.querySelectorAll('.lang-btn');
 const htmlElement = document.documentElement;
+const themeToggleBtn = document.getElementById('themeToggle');
+const themeIcon = themeToggleBtn.querySelector('i');
+
+// Theme switching function
+function toggleTheme() {
+    // Switch between dark and light themes
+    if (currentTheme === 'dark') {
+        currentTheme = 'light';
+        htmlElement.setAttribute('data-theme', 'light');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        currentTheme = 'dark';
+        htmlElement.setAttribute('data-theme', 'dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+
+    // Update logo color based on theme
+    const logoElement = document.querySelector('.lvo-logo');
+    if (logoElement) {
+        logoElement.setAttribute('fill', currentTheme === 'dark' ? '#3fe0d0' : '#0e8a7d');
+    }
+
+    // Save theme preference to localStorage
+    localStorage.setItem('preferredTheme', currentTheme);
+}
 
 // Function to set language and update content
 function setLanguage(lang) {
@@ -160,6 +189,9 @@ langButtons.forEach(btn => {
         setLanguage(lang);
     });
 });
+
+// Theme toggle event listener
+themeToggleBtn.addEventListener('click', toggleTheme);
 
 // Close modal when clicking X button
 closeModalBtn.addEventListener('click', closeProjectModal);
@@ -316,6 +348,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set the initial language
     setLanguage(savedLanguage);
+
+    // Get preferred theme from localStorage, or default to 'dark'
+    const savedTheme = localStorage.getItem('preferredTheme') || 'dark';
+    currentTheme = savedTheme;
+    htmlElement.setAttribute('data-theme', savedTheme);
+    themeIcon.classList.add(savedTheme === 'dark' ? 'fa-moon' : 'fa-sun');
 
     // Open first accordion item by default
     const firstAccordionItem = document.querySelector('.accordion-item');
