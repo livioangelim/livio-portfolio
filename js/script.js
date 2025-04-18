@@ -243,6 +243,31 @@ function generateProjectCards() {
     }
 }
 
+// Function to handle the expandable bio hover animation
+function initializeBioExpansion() {
+    const heroText = document.querySelector('.hero-text');
+
+    if (!heroText) return;
+
+    let hoverTimer;
+
+    // When mouse enters the hero text area
+    heroText.addEventListener('mouseenter', () => {
+        // Set a 1 second timer before triggering the expansion
+        hoverTimer = setTimeout(() => {
+            heroText.classList.add('expanded');
+        }, 1000); // 1 second delay
+    });
+
+    // When mouse leaves the hero text area
+    heroText.addEventListener('mouseleave', () => {
+        // Clear the timer if mouse leaves before 1 second
+        clearTimeout(hoverTimer);
+        // Remove the expanded class
+        heroText.classList.remove('expanded');
+    });
+}
+
 // Call this in your document ready function
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -519,4 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Generate project cards
     generateProjectCards();
+
+    // Initialize bio expansion hover animation
+    initializeBioExpansion();
 });

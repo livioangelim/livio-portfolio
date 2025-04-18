@@ -223,6 +223,145 @@ a:hover {
     animation: logoFlow 6s ease-in-out infinite alternate;
 }
 
+/* Hero and About Combined Section */
+.hero-about-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.expandable-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    animation: fadeInUp 1s ease forwards;
+    transition: transform 0.5s ease, font-size 0.5s ease;
+}
+
+.expandable-subtitle {
+    font-size: 1.8rem;
+    opacity: 1;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+    color: var(--text-secondary);
+    transition: transform 0.5s ease, font-size 0.5s ease;
+}
+
+.expanded-bio {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.8s ease, opacity 0.5s ease;
+    margin-top: 1rem;
+}
+
+.expanded-bio p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.highlight {
+    color: var(--turquoise-color);
+}
+
+/* Hover animation for expanding bio */
+.hero-text:hover .expandable-title,
+.hero-text:focus-within .expandable-title {
+    transform: translateY(-20px);
+    font-size: 3.5rem;
+}
+
+.hero-text:hover .expandable-subtitle,
+.hero-text:focus-within .expandable-subtitle {
+    transform: translateY(-15px);
+    font-size: 1.6rem;
+}
+
+.hero-text:hover .expanded-bio,
+.hero-text:focus-within .expanded-bio {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+/* Hero text expanded state */
+.hero-text.expanded .expandable-title {
+    transform: translateY(-20px);
+    font-size: 3.5rem;
+}
+
+.hero-text.expanded .expandable-subtitle {
+    transform: translateY(-15px);
+    font-size: 1.6rem;
+}
+
+.hero-text.expanded .expanded-bio {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+/* About image in hero section */
+.about-image {
+    flex: 0 0 300px;
+    position: relative;
+    margin-left: auto;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--turquoise-color);
+    border-radius: 10px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: translate(-5px, -5px);
+}
+
+.about-image:hover::after {
+    transform: translate(10px, 10px);
+}
+
+/* Social links in hero section */
+.hero-text .social-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
 /* Navbar */
 .navbar {
     position: fixed;
@@ -1096,6 +1235,24 @@ a:hover {
     .social-links {
         justify-content: center;
     }
+
+    .hero-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-image {
+        margin: 0 auto;
+    }
+
+    .hero-text .social-links {
+        justify-content: center;
+    }
+
+    .expandable-title {
+        font-size: 3.5rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1123,6 +1280,19 @@ a:hover {
     .btn {
         width: 100%;
     }
+
+    .expandable-title {
+        font-size: 3rem;
+    }
+
+    .expandable-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-text:hover .expandable-title,
+    .hero-text:focus-within .expandable-title {
+        font-size: 2.8rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -1148,5 +1318,13 @@ a:hover {
 
     .modal-body {
         padding: 1.5rem;
+    }
+
+    .expandable-title {
+        font-size: 2.5rem;
+    }
+
+    .about-image {
+        flex: 0 0 250px;
     }
 }

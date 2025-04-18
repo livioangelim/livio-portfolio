@@ -19,15 +19,7 @@ const translations = {
         // Hero section
         hero_greeting: "Hi, I'm <span>Livio</span>",
         hero_title: "Software Engineer",
-
-        // About section
-        about_title: "About Me",
-        about_intro: "Hi, I'm Livio A. Mororo! A <strong>problem-solving Software Engineer</strong> with a <strong>Bachelor's in Computer Science</strong> and a track record of building scalable systems that drive efficiency. My expertise spans:",
-        about_backend: "<strong>Backend Development</strong>: Architecting Java/Spring Boot APIs with 99.8% reliability for enterprise apps.",
-        about_data: "<strong>Data-Driven Solutions</strong>: Building Python/ML tools like a loan eligibility predictor that cut processing time from 5 days to 2 seconds.",
-        about_fullstack: "<strong>Full-Stack Agility</strong>: Crafting Angular/React frontends paired with MySQL databases for seamless user experiences.",
-        about_environments: "I thrive in fast-paced environments where <strong>innovation meets execution</strong>. Whether automating cloud deployments with Docker or debugging high-stakes systems, I'm driven by turning complex challenges into elegant solutions.",
-        about_callout: "<strong>Let's collaborate to build something impactful!</strong>",
+        hero_expanded_bio: "Hi, I'm Livio—a problem-solving <strong class=\"highlight\">Software Engineer</strong> with a flair for turning <strong class=\"highlight\">complex challenges</strong> into scalable, <strong class=\"highlight\">AI-driven solutions</strong>. Armed with dual bachelor's degrees in <strong class=\"highlight\">Computer Science</strong> and <strong class=\"highlight\">Social Communication - Journalism</strong>, alongside fluency in four languages (English, Portuguese, Spanish, French), I bridge technical precision with human-centric design to build systems that optimize efficiency and impact.<br><br>My work spans <strong class=\"highlight\">AI/ML development</strong> (TensorFlow, NLP), <strong class=\"highlight\">cloud-native architectures</strong> (AWS, Docker), and <strong class=\"highlight\">data-driven applications</strong>, from engineering an ML loan-approval model (88% accuracy) to automating multilingual newsrooms with ethical AI tools like Jornal.IA. A relentless reinventor, I've pivoted from interviewing World Cup athletes to optimizing CI/CD pipelines, proving that code and creativity share the same compiler.",
 
         // Skills section
         skills_title: "My Skills",
@@ -86,15 +78,7 @@ const translations = {
         // Hero section
         hero_greeting: "Bonjour, je suis <span>Livio</span>",
         hero_title: "Ingénieur Logiciel",
-
-        // About section
-        about_title: "À Propos de Moi",
-        about_intro: "Bonjour, je suis Livio A. Mororo ! Un <strong>ingénieur logiciel résolveur de problèmes</strong> avec une <strong>licence en informatique</strong> et un historique de construction de systèmes évolutifs qui améliorent l'efficacité. Mon expertise comprend :",
-        about_backend: "<strong>Développement Backend</strong> : Architecture d'API Java/Spring Boot avec une fiabilité de 99,8% pour les applications d'entreprise.",
-        about_data: "<strong>Solutions Axées sur les Données</strong> : Développement d'outils Python/ML comme un prédicteur d'éligibilité aux prêts qui a réduit le temps de traitement de 5 jours à 2 secondes.",
-        about_fullstack: "<strong>Agilité Full-Stack</strong> : Création d'interfaces Angular/React associées à des bases de données MySQL pour des expériences utilisateur fluides.",
-        about_environments: "Je m'épanouis dans des environnements rapides où <strong>l'innovation rencontre l'exécution</strong>. Qu'il s'agisse d'automatiser des déploiements cloud avec Docker ou de déboguer des systèmes à enjeux élevés, je suis motivé par la transformation de défis complexes en solutions élégantes.",
-        about_callout: "<strong>Collaborons pour construire quelque chose d'impactant !</strong>",
+        hero_expanded_bio: "Bonjour, je suis Livio—un <strong class=\"highlight\">ingénieur logiciel</strong> résolveur de problèmes</strong> avec un talent pour transformer des <strong class=\"highlight\">défis complexes</strong> en <strong class=\"highlight\">solutions évolutives basées sur l'IA</strong>. Armé de doubles diplômes en <strong class=\"highlight\">informatique</strong> et <strong class=\"highlight\">communication sociale - journalisme</strong>, ainsi que d'une maîtrise de quatre langues (anglais, portugais, espagnol, français), je concilie précision technique et conception centrée sur l'humain pour construire des systèmes qui optimisent l'efficacité et l'impact.<br><br>Mon travail couvre le <strong class=\"highlight\">développement d'IA/ML</strong> (TensorFlow, NLP), les <strong class=\"highlight\">architectures cloud-native</strong> (AWS, Docker), et les <strong class=\"highlight\">applications basées sur les données</strong>, de l'ingénierie d'un modèle d'approbation de prêts ML (précision de 88%) à l'automatisation de salles de rédaction multilingues avec des outils d'IA éthiques comme Jornal.IA. Réinventeur infatigable, je suis passé des interviews d'athlètes de la Coupe du Monde à l'optimisation des pipelines CI/CD, prouvant que le code et la créativité partagent le même compilateur.",
 
         // Skills section
         skills_title: "Mes Compétences",
@@ -153,6 +137,7 @@ const translations = {
         // Hero section
         hero_greeting: "Olá, eu sou <span>Livio</span>",
         hero_title: "Engenheiro de Software",
+        hero_expanded_bio: "Olá, eu sou Livio—um <strong class=\"highlight\">Engenheiro de Software</strong> solucionador de problemas com talento para transformar <strong class=\"highlight\">desafios complexos</strong> em <strong class=\"highlight\">soluções escaláveis orientadas por IA</strong>. Equipado com diplomas de bacharel em <strong class=\"highlight\">Ciência da Computação</strong> e <strong class=\"highlight\">Comunicação Social - Jornalismo</strong>, além de fluência em quatro idiomas (inglês, português, espanhol, francês), eu uno precisão técnica com design centrado no ser humano para construir sistemas que otimizam eficiência e impacto.<br><br>Meu trabalho abrange <strong class=\"highlight\">desenvolvimento de IA/ML</strong> (TensorFlow, NLP), <strong class=\"highlight\">arquiteturas nativas em nuvem</strong> (AWS, Docker), e <strong class=\"highlight\">aplicações orientadas a dados</strong>, desde a engenharia de um modelo ML de aprovação de empréstimos (88% de precisão) até a automação de redações multilíngues com ferramentas éticas de IA como o Jornal.IA. Um reinventor incansável, passei de entrevistar atletas da Copa do Mundo a otimizar pipelines de CI/CD, provando que código e criatividade compartilham o mesmo compilador.",
 
         // About section
         about_title: "Sobre Mim",
@@ -220,6 +205,7 @@ const translations = {
         // Hero section
         hero_greeting: "Hola, soy <span>Livio</span>",
         hero_title: "Ingeniero de Software",
+        hero_expanded_bio: "Hola, soy Livio—un <strong class=\"highlight\">Ingeniero de Software</strong> solucionador de problemas con talento para transformar <strong class=\"highlight\">desafíos complejos</strong> en <strong class=\"highlight\">soluciones escalables impulsadas por IA</strong>. Armado con títulos de licenciatura en <strong class=\"highlight\">Informática</strong> y <strong class=\"highlight\">Comunicación Social - Periodismo</strong>, además de fluidez en cuatro idiomas (inglés, portugués, español, francés), combino la precisión técnica con el diseño centrado en el ser humano para construir sistemas que optimizan la eficiencia y el impacto.<br><br>Mi trabajo abarca <strong class=\"highlight\">desarrollo de IA/ML</strong> (TensorFlow, NLP), <strong class=\"highlight\">arquitecturas nativas en la nube</strong> (AWS, Docker), y <strong class=\"highlight\">aplicaciones basadas en datos</strong>, desde la ingeniería de un modelo ML de aprobación de préstamos (88% de precisión) hasta la automatización de redacciones multilingües con herramientas éticas de IA como Jornal.IA. Un reinventor incansable, he pasado de entrevistar a atletas de la Copa del Mundo a optimizar canales de CI/CD, demostrando que el código y la creatividad comparten el mismo compilador.",
 
         // About section
         about_title: "Sobre Mí",
