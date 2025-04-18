@@ -88,7 +88,6 @@
             <div class="nav-links">
                 <a href="#header" class="navbar-link" data-translate-key="nav_home">Home</a>
                 <a href="#about" class="navbar-link" data-translate-key="nav_about">About</a>
-                <a href="#skills" class="navbar-link" data-translate-key="nav_skills">Skills</a>
                 <a href="#projects" class="navbar-link" data-translate-key="nav_projects">Projects</a>
                 <a href="#contact" class="navbar-link" data-translate-key="nav_contact">Contact</a>
             </div>
@@ -150,113 +149,20 @@
     </section>
     <!-- End of About Section -->
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <h2 class="section-title" data-translate-key="skills_title">My Skills</h2>
-
-        <div class="accordion">
-
-            <!-- Programming Languages -->
-            <div class="accordion-item">
-                <h3 class="accordion-header" data-translate-key="skills_programming_languages">Programming Languages
-                </h3>
-                <div class="accordion-content">
-                    <span>C++</span>
-                    <span>Java</span>
-                    <span>JavaScript</span>
-                    <span>Python</span>
-                    <span>TypeScript</span>
-                </div>
-            </div>
-
-            <!-- Web Technologies -->
-            <div class="accordion-item">
-                <h3 class="accordion-header" data-translate-key="skills_web_technologies">Web Technologies</h3>
-                <div class="accordion-content">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>Angular</span>
-                    <span>React</span>
-                </div>
-            </div>
-
-            <!-- Frameworks and Libraries -->
-            <div class="accordion-item">
-                <h3 class="accordion-header" data-translate-key="skills_frameworks">Frameworks and Libraries</h3>
-                <div class="accordion-content">
-                    <span>Spring</span>
-                    <span>Hibernate</span>
-                    <span>Pandas</span>
-                    <span>NumPy</span>
-                </div>
-            </div>
-
-            <!-- Database Management -->
-            <div class="accordion-item">
-                <h3 class="accordion-header" data-translate-key="skills_database">Database Management</h3>
-                <div class="accordion-content">
-                    <span>MySQL</span>
-                    <span>SQL Server</span>
-                    <span>PostgreSQL</span>
-                    <span>JPA/Hibernate</span>
-                </div>
-            </div>
-
-            <!-- Operating Systems -->
-            <div class="accordion-item">
-                <h3 class="accordion-header" data-translate-key="skills_os">Operating Systems</h3>
-                <div class="accordion-content">
-                    <span>iOS</span>
-                    <span>Linux</span>
-                    <span>Windows</span>
-                </div>
-            </div>
-
-            <!-- Software Development -->
-            <div class="accordion-item">
-                <h3 class="accordion-header" data-translate-key="skills_software_dev">Software Development</h3>
-                <div class="accordion-content">
-                    <span>Object-Oriented Programming (OOP)</span>
-                    <span>Agile Development (Scrum, Kanban)</span>
-                    <span>Version Control (Git, GitHub)</span>
-                    <span>RESTful APIs</span>
-                    <span>Test-Driven Development (TDD)</span>
-                    <span>Continuous Integration/Continuous Deployment (CI/CD)</span>
-                </div>
-            </div>
-
-            <!-- Cloud and Virtualization -->
-            <div class="accordion-item">
-                <h3 class="accordion-header" data-translate-key="skills_cloud">Cloud and Virtualization</h3>
-                <div class="accordion-content">
-                    <span>AWS</span>
-                    <span>Docker</span>
-                    <span>Kubernetes</span>
-                    <span>Azure</span>
-                </div>
-            </div>
-
-            <!-- Scripting and Automation -->
-            <div class="accordion-item">
-                <h3 class="accordion-header" data-translate-key="skills_scripting">Scripting and Automation</h3>
-                <div class="accordion-content">
-                    <span>Bash</span>
-                    <span>PowerShell</span>
-                    <span>Ansible</span>
-                    <span>Terraform</span>
-                    <span>Jenkins</span>
-                    <span>Postman</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Skills Section -->
-
     <!-- Projects Section -->
     <section id="projects" class="projects-section container">
-        <h2 class="section-title" data-translate-key="projects_title">My Projects</h2>
-        <div class="projects-grid" id="projectsGrid">
-            <!-- Project cards will be dynamically generated by JavaScript -->
+        <h2 class="section-title" data-translate-key="projects_title">Projects & Skills</h2>
+        <p class="section-description" data-translate-key="projects_description">Browse my projects and filter by technology to see my skills in action. Click on any card to view more details.</p>
+        
+        <!-- Project Filters -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all" data-translate-key="filter_all">All</button>
+            <!-- Skill filters will be dynamically added via JavaScript -->
+        </div>
+        
+        <!-- Projects Grid -->
+        <div id="projectsGrid" class="projects-grid">
+            <!-- Project cards will be generated via JavaScript -->
         </div>
     </section>
     <!-- End of Projects Section -->

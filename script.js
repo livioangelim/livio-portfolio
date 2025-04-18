@@ -79,24 +79,144 @@ function setLanguage(lang) {
     localStorage.setItem('preferredLanguage', lang);
 }
 
+/**
+ * Project filtering functionality
+ */
+
+// Function to extract all unique technologies from projects
+function getAllTechnologies() {
+    const allTechnologies = new Set();
+
+    // Loop through all projects
+    projectsData.forEach(project => {
+        // Add each technology to the Set (this automatically eliminates duplicates)
+        project.tech.forEach(tech => {
+            allTechnologies.add(tech);
+        });
+    });
+
+    // Convert Set to Array and sort alphabetically
+    return Array.from(allTechnologies).sort();
+}
+
+// Function to create filter buttons
+function createFilterButtons() {
+    const projectFilters = document.querySelector('.project-filters');
+
+    // Exit if filter container doesn't exist
+    if (!projectFilters) return;
+
+    // Get all unique technologies
+    const technologies = getAllTechnologies();
+
+    // Create and append filter buttons for each technology
+    technologies.forEach(tech => {
+        const button = document.createElement('button');
+        button.classList.add('filter-btn');
+        button.setAttribute('data-filter', tech);
+        button.textContent = tech;
+
+        // Add click event listener
+        button.addEventListener('click', () => {
+            // Toggle active class on this button
+            button.classList.toggle('active');
+
+            // Get all active filters
+            filterProjects();
+        });
+
+        projectFilters.appendChild(button);
+    });
+}
+
+// Function to filter projects based on active filters
+function filterProjects() {
+    const projectCards = document.querySelectorAll('.project-card');
+    const activeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
+        .map(btn => btn.getAttribute('data-filter'));
+
+    // If "All" filter is active or no filters are active, show all projects
+    const allFilterActive = activeFilters.includes('all');
+
+    projectCards.forEach(card => {
+        const projectId = card.getAttribute('data-id');
+        const project = projectsData.find(p => p.id === projectId);
+
+        // If "All" filter is active, show all projects
+        if (allFilterActive) {
+            card.style.display = 'flex';
+            return;
+        }
+        
+        // If no filters are active, hide all projects
+        if (activeFilters.length === 0) {
+            card.style.display = 'none';
+            return;
+        }
+
+        // Check if project has any of the active filters
+        const hasMatchingTech = project.tech.some(tech => activeFilters.includes(tech));
+
+        if (hasMatchingTech) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Function to handle the "All" filter button
+function handleAllFilterButton() {
+    const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+
+    if (!allFilterBtn) return;
+
+    allFilterBtn.addEventListener('click', () => {
+        // Toggle active class on "All" button like other filter buttons
+        allFilterBtn.classList.toggle('active');
+        
+        // Apply filtering based on currently active filters
+        filterProjects();
+    });
+}
+
+// Initialize project filtering
+function initializeProjectFiltering() {
+    createFilterButtons();
+    handleAllFilterButton();
+
+    // Make sure the "All" filter is active by default
+    const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allFilterBtn) {
+        allFilterBtn.classList.add('active');
+    }
+}
+
 // Function to generate project cards
 function generateProjectCards() {
-    // Clear existing projects
-    projectsGrid.innerHTML = '';
+    if (!projectsGrid) return;
 
-    // Create and append each project card
+    projectsGrid.innerHTML = ''; // Clear existing cards
+
     projectsData.forEach(project => {
         const projectCard = document.createElement('div');
         projectCard.classList.add('project-card');
-        projectCard.dataset.projectId = project.id;
+        projectCard.setAttribute('data-id', project.id);
 
+        // Create a brief summary from the description by extracting text from the HTML
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = project.descriptionKey[currentLanguage];
+        const plainText = tempDiv.textContent || tempDiv.innerText;
+        const summaryText = plainText.substring(0, 100) + '...';
+
+        // Create card HTML
         projectCard.innerHTML = `
-            <img class="project-card-image" src="${project.imageUrl}" alt="${project.titleKey[currentLanguage]}">
+            <img src="${project.imageUrl}" alt="${project.titleKey[currentLanguage]}" class="project-card-image">
             <div class="project-card-content">
                 <h3 class="project-card-title">${project.titleKey[currentLanguage]}</h3>
+                <p>${summaryText}</p>
                 <div class="project-card-tech">
-                    ${project.tech.slice(0, 3).map(tech => `<span>${tech}</span>`).join(' ')}
-                    ${project.tech.length > 3 ? '<span>...</span>' : ''}
+                    ${project.tech.map(tech => `<span>${tech}</span>`).join('')}
                 </div>
             </div>
         `;
@@ -109,6 +229,16 @@ function generateProjectCards() {
     });
 }
 
+// Call this in your document ready function
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Initialize project filtering
+    initializeProjectFiltering();
+
+    // Generate project cards
+    generateProjectCards();
+
+});
 // Function to open project modal
 function openProjectModal(project) {
     // Populate modal with project info

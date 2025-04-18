@@ -491,6 +491,38 @@ a:hover {
     background-color: var(--bg-primary);
 }
 
+/* Project Filters */
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: var(--bg-tertiary);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: rgba(63, 224, 208, 0.1);
+    border-color: var(--turquoise-color);
+    color: var(--turquoise-color);
+}
+
+.filter-btn.active {
+    background-color: var(--turquoise-color);
+    color: var(--bg-primary);
+    border-color: var(--turquoise-color);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -512,6 +544,10 @@ a:hover {
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-medium);
+}
+
+.project-card.hidden {
+    display: none;
 }
 
 .project-card-image {
@@ -546,6 +582,62 @@ a:hover {
     font-size: 0.75rem;
     color: var(--text-tertiary);
     white-space: nowrap;
+}
+
+/* Project Filters */
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.filter-label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.tech-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-filter {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.tech-filter:hover {
+    background-color: var(--accent-color);
+    color: var(--text-inverse);
+}
+
+.tech-filter.active {
+    background-color: var(--accent-color);
+    color: var(--text-inverse);
+}
+
+.clear-filters-btn {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    margin-left: auto;
+}
+
+.clear-filters-btn:hover {
+    background-color: var(--card-bg);
 }
 
 /* Project Modal */

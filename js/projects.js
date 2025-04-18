@@ -7,106 +7,106 @@ const projectsData = [
     {
         id: "project1",
         titleKey: {
+            en: "Loan Eligibility Checker",
+            fr: "Vérificateur d'Éligibilité aux Prêts",
+            pt: "Verificador de Elegibilidade para Empréstimos",
+            es: "Verificador de Elegibilidad para Préstamos"
+        },
+        descriptionKey: {
+            en: "Developed an ML-powered loan approval system reducing processing time from 5 days to 2 seconds (88% accuracy). Engineered logistic regression model (ROC-AUC: 0.90) via Flask API with 47ms latency. Addressed class imbalance using SMOTE and automated Pandas/NumPy pipelines. Built real-time dashboards for income/approval trend visualization.Key Skills: ML Modeling, API Development, Data Visualization",
+            fr: "Système d'approbation de prêts automatisé réduisant le traitement de 5 jours à 2 secondes (précision: 88%). Modèle de régression logistique (ROC-AUC: 0,90) via API Flask (47ms). Pipeline automatisé avec SMOTE et tableaux de bord temps réel.Compétences Clés: Modélisation ML, Développement d'API, Visualisation",
+            pt: "Sistema de aprovação de empréstimos automatizado reduzindo processamento de 5 dias para 2 segundos (88% precisão). Modelo de regressão logística (ROC-AUC: 0,90) via API Flask (47ms). Pipeline automatizado com SMOTE e painéis interativos.Habilidades Principais: Modelagem ML, Desenvolvimento API, Visualização",
+            es: "Sistema de aprobación de préstamos automatizado reduciendo procesamiento de 5 días a 2 segundos (88% precisión). Modelo de regresión logística (ROC-AUC: 0,90) mediante API Flask (47ms). Pipeline automatizado con SMOTE y paneles interactivos.Habilidades Clave: Modelado ML, Desarrollo API, Visualización"
+        },
+        imageUrl: "images/loan-checker.jpg",
+        tech: ["Python", "TensorFlow", "Flask", "Pandas", "SMOTE", "Matplotlib"],
+        repoUrl: "https://github.com/livioangelim/loan-eligibility-checker",
+        docsUrl: "https://github.com/livioangelim/loan-eligibility-checker/wiki",
+        demoUrl: "https://loan-checker.livioangelim.com",
+        videoUrl: ""
+    },
+    {
+        id: "project2",
+        titleKey: {
             en: "Global Application Suite",
             fr: "Suite d'Applications Globales",
             pt: "Suite Global de Aplicações",
             es: "Suite de Aplicaciones Globales"
         },
         descriptionKey: {
-            en: "Developed a comprehensive suite of interconnected applications for managing international business operations. The system integrates inventory management, CRM, and analytics in a unified dashboard that supports real-time data synchronization across multiple regions.<br><br><strong>Challenges:</strong><ul><li>Ensuring data consistency across 17 international locations with varying internet reliability</li><li>Implementing multi-currency and multi-language support with different regulatory requirements</li><li>Scaling the system to handle 10,000+ concurrent users during peak business hours</li></ul><br><strong>Solutions:</strong><ul><li>Designed a distributed architecture with local data caching and intelligent sync mechanisms</li><li>Created a modular internationalization framework with pluggable compliance modules</li><li>Implemented horizontal scaling with load balancing and database sharding techniques</li></ul>",
-            fr: "Développé une suite complète d'applications interconnectées pour gérer les opérations commerciales internationales. Le système intègre la gestion des stocks, la GRC et l'analyse dans un tableau de bord unifié qui prend en charge la synchronisation des données en temps réel dans plusieurs régions.<br><br><strong>Défis:</strong><ul><li>Assurer la cohérence des données dans 17 sites internationaux avec une fiabilité Internet variable</li><li>Mise en œuvre du support multi-devises et multilingue avec différentes exigences réglementaires</li><li>Mise à l'échelle du système pour gérer plus de 10 000 utilisateurs simultanés pendant les heures de pointe</li></ul><br><strong>Solutions:</strong><ul><li>Conception d'une architecture distribuée avec mise en cache locale des données et mécanismes de synchronisation intelligents</li><li>Création d'un cadre d'internationalisation modulaire avec modules de conformité enfichables</li><li>Mise en œuvre de la mise à l'échelle horizontale avec des techniques d'équilibrage de charge et de partitionnement de base de données</li></ul>",
-            pt: "Desenvolvi uma suíte abrangente de aplicativos interconectados para gerenciar operações de negócios internacionais. O sistema integra gerenciamento de inventário, CRM e análises em um painel unificado que suporta sincronização de dados em tempo real em várias regiões.<br><br><strong>Desafios:</strong><ul><li>Garantir a consistência de dados em 17 locais internacionais com confiabilidade variável de internet</li><li>Implementação de suporte a múltiplas moedas e múltiplos idiomas com diferentes requisitos regulatórios</li><li>Escalar o sistema para lidar com mais de 10.000 usuários simultâneos durante horários de pico</li></ul><br><strong>Soluções:</strong><ul><li>Projetei uma arquitetura distribuída com cache local de dados e mecanismos inteligentes de sincronização</li><li>Criei um framework de internacionalização modular com módulos de conformidade plugáveis</li><li>Implementei escalonamento horizontal com técnicas de balanceamento de carga e fragmentação de banco de dados</li></ul>",
-            es: "Desarrollé una suite completa de aplicaciones interconectadas para gestionar operaciones comerciales internacionales. El sistema integra gestión de inventario, CRM y análisis en un panel unificado que admite sincronización de datos en tiempo real en múltiples regiones.<br><br><strong>Desafíos:</strong><ul><li>Garantizar la consistencia de datos en 17 ubicaciones internacionales con fiabilidad variable de internet</li><li>Implementar soporte multimoneda y multiidioma con diferentes requisitos normativos</li><li>Escalar el sistema para manejar más de 10.000 usuarios concurrentes durante horas punta</li></ul><br><strong>Soluciones:</strong><ul><li>Diseñé una arquitectura distribuida con almacenamiento en caché local y mecanismos de sincronización inteligentes</li><li>Creé un marco de internacionalización modular con módulos de cumplimiento conectables</li><li>Implementé escalado horizontal con técnicas de equilibrio de carga y fragmentación de bases de datos</li></ul>"
+            en: "Enterprise Java/Spring Boot app with Angular frontend. Achieved 99.8% API reliability via JUnit/Postman testing (25% error reduction). Automated CI/CD with Docker/AWS accelerated deployments by 40%. Supports 10k+ users with role-based access.Key Skills: Microservices, Testing, DevOps",
+            fr: "Application d'entreprise Java/Spring Boot avec interface Angular. Fiabilité API 99,8% via tests JUnit/Postman (erreurs réduites de 25%). CI/CD automatisé avec Docker/AWS (déploiements 40% plus rapides). Supporte 10k+ utilisateurs.Compétences Clés: Microservices, Tests, DevOps",
+            pt: "Aplicativo empresarial Java/Spring Boot com frontend Angular. Confiabilidade API 99,8% via testes JUnit/Postman (25% menos erros). CI/CD automatizado com Docker/AWS (implantações 40% mais rápidas). Suporta 10k+ usuários.Habilidades Principais: Microserviços, Testes, DevOps",
+            es: "Aplicación empresarial Java/Spring Boot con interfaz Angular. Confiabilidad API 99,8% mediante pruebas JUnit/Postman (25% menos errores). CI/CD automatizado con Docker/AWS (despliegues 40% más rápidos). Soporta 10k+ usuarios.Habilidades Clave: Microservicios, Pruebas, DevOps"
         },
-        imageUrl: "images/pic1.jpg",
-        tech: ["Java", "Spring Boot", "Angular", "PostgreSQL", "Docker", "Redis", "Kubernetes"],
+        imageUrl: "images/global-app.jpg",
+        tech: ["Java", "Spring Boot", "Angular", "AWS", "Docker", "SQL"],
         repoUrl: "https://github.com/livioangelim/global-app-suite",
         docsUrl: "https://github.com/livioangelim/global-app-suite/wiki",
-        demoUrl: "https://global-app-demo.livioangelim.com",
+        demoUrl: "https://global-app.livioangelim.com",
         videoUrl: ""
-    },
-    {
-        id: "project2",
-        titleKey: {
-            en: "AI Loan Predictor",
-            fr: "Prédicteur de Prêt IA",
-            pt: "Preditor de Empréstimos com IA",
-            es: "Predictor de Préstamos con IA"
-        },
-        descriptionKey: {
-            en: "Created a machine learning solution that revolutionized the loan approval process for a major financial institution. The system analyzes applicant data and predicts loan eligibility with 97.3% accuracy, reducing the processing time from 5 days to just 2 seconds.<br><br><strong>Challenges:</strong><ul><li>Working with highly imbalanced historical loan data (92% approved vs 8% rejected)</li><li>Ensuring model explainability for regulatory compliance and customer transparency</li><li>Handling missing or inconsistent applicant information</li></ul><br><strong>Solutions:</strong><ul><li>Implemented advanced sampling techniques (SMOTE) and ensemble methods to address class imbalance</li><li>Developed a custom explainability layer using SHAP values to justify all predictions</li><li>Created sophisticated data cleaning pipelines with intelligent imputation strategies</li></ul>",
-            fr: "Créé une solution d'apprentissage automatique qui a révolutionné le processus d'approbation des prêts pour une institution financière majeure. Le système analyse les données des demandeurs et prédit l'éligibilité aux prêts avec une précision de 97,3%, réduisant le temps de traitement de 5 jours à seulement 2 secondes.<br><br><strong>Défis:</strong><ul><li>Travailler avec des données historiques de prêts très déséquilibrées (92% approuvés contre 8% rejetés)</li><li>Assurer l'explicabilité du modèle pour la conformité réglementaire et la transparence pour les clients</li><li>Gérer les informations manquantes ou incohérentes des demandeurs</li></ul><br><strong>Solutions:</strong><ul><li>Mise en œuvre de techniques d'échantillonnage avancées (SMOTE) et de méthodes d'ensemble pour résoudre le déséquilibre de classe</li><li>Développement d'une couche d'explicabilité personnalisée utilisant les valeurs SHAP pour justifier toutes les prédictions</li><li>Création de pipelines sophistiqués de nettoyage de données avec des stratégies d'imputation intelligentes</li></ul>",
-            pt: "Criei uma solução de aprendizado de máquina que revolucionou o processo de aprovação de empréstimos para uma importante instituição financeira. O sistema analisa os dados dos solicitantes e prevê a elegibilidade do empréstimo com 97,3% de precisão, reduzindo o tempo de processamento de 5 dias para apenas 2 segundos.<br><br><strong>Desafios:</strong><ul><li>Trabalhar com dados históricos de empréstimos altamente desequilibrados (92% aprovados vs 8% rejeitados)</li><li>Garantir a explicabilidade do modelo para conformidade regulatória e transparência para o cliente</li><li>Lidar com informações incompletas ou inconsistentes dos solicitantes</li></ul><br><strong>Soluções:</strong><ul><li>Implementei técnicas avançadas de amostragem (SMOTE) e métodos de ensemble para abordar o desequilíbrio de classes</li><li>Desenvolvi uma camada de explicabilidade personalizada usando valores SHAP para justificar todas as previsões</li><li>Criei pipelines sofisticados de limpeza de dados com estratégias inteligentes de imputação</li></ul>",
-            es: "Creé una solución de aprendizaje automático que revolucionó el proceso de aprobación de préstamos para una importante institución financiera. El sistema analiza los datos de los solicitantes y predice la elegibilidad del préstamo con un 97,3% de precisión, reduciendo el tiempo de procesamiento de 5 días a solo 2 segundos.<br><br><strong>Desafíos:</strong><ul><li>Trabajar con datos históricos de préstamos muy desequilibrados (92% aprobados vs 8% rechazados)</li><li>Garantizar la explicabilidad del modelo para el cumplimiento normativo y la transparencia del cliente</li><li>Manejar información faltante o inconsistente de los solicitantes</li></ul><br><strong>Soluciones:</strong><ul><li>Implementé técnicas avanzadas de muestreo (SMOTE) y métodos de conjunto para abordar el desequilibrio de clases</li><li>Desarrollé una capa de explicabilidad personalizada utilizando valores SHAP para justificar todas las predicciones</li><li>Creé canalizaciones sofisticadas de limpieza de datos con estrategias inteligentes de imputación</li></ul>"
-        },
-        imageUrl: "images/pic2.jpg",
-        tech: ["Python", "TensorFlow", "Scikit-learn", "Flask", "AWS", "Pandas", "XGBoost"],
-        repoUrl: "https://github.com/livioangelim/ai-loan-predictor",
-        docsUrl: "https://github.com/livioangelim/ai-loan-predictor/wiki",
-        demoUrl: "https://ai-loan-demo.livioangelim.com",
-        videoUrl: "https://www.youtube.com/watch?v=example1"
     },
     {
         id: "project3",
         titleKey: {
-            en: "Cloud Deployment Automation",
-            fr: "Automatisation de Déploiement Cloud",
-            pt: "Automação de Implantação na Nuvem",
-            es: "Automatización de Despliegue en la Nube"
+            en: "Jornal.IA (AI Journalism)",
+            fr: "Jornal.IA (Journalisme IA)",
+            pt: "Jornal.IA (Jornalismo IA)",
+            es: "Jornal.IA (Periodismo IA)"
         },
         descriptionKey: {
-            en: "Designed and implemented an infrastructure-as-code solution that automates the deployment and scaling of microservices. The system reduced deployment time by 87% and virtually eliminated configuration-related errors through comprehensive validation checks.<br><br><strong>Challenges:</strong><ul><li>Managing complex dependencies between 40+ microservices across development, staging, and production environments</li><li>Ensuring security compliance while maintaining deployment velocity</li><li>Supporting rollbacks and state reconciliation during failed deployments</li></ul><br><strong>Solutions:</strong><ul><li>Developed a dependency graph visualization tool and sequencing algorithm to optimize deployment order</li><li>Implemented pre-deployment security scanning with policy-as-code integration</li><li>Created a state capture system that enables atomic deployments with automatic rollback capability</li></ul>",
-            fr: "Conçu et mis en œuvre une solution d'infrastructure sous forme de code qui automatise le déploiement et la mise à l'échelle des microservices. Le système a réduit le temps de déploiement de 87% et pratiquement éliminé les erreurs liées à la configuration grâce à des vérifications de validation complètes.<br><br><strong>Défis:</strong><ul><li>Gérer des dépendances complexes entre plus de 40 microservices dans les environnements de développement, de préproduction et de production</li><li>Assurer la conformité en matière de sécurité tout en maintenant la vitesse de déploiement</li><li>Prendre en charge les retours en arrière et la réconciliation d'état lors des déploiements échoués</li></ul><br><strong>Solutions:</strong><ul><li>Développement d'un outil de visualisation de graphe de dépendances et d'un algorithme de séquencement pour optimiser l'ordre de déploiement</li><li>Mise en œuvre d'une analyse de sécurité avant déploiement avec intégration de politiques sous forme de code</li><li>Création d'un système de capture d'état permettant des déploiements atomiques avec capacité de retour en arrière automatique</li></ul>",
-            pt: "Projetei e implementei uma solução de infraestrutura como código que automatiza a implantação e o dimensionamento de microsserviços. O sistema reduziu o tempo de implantação em 87% e praticamente eliminou erros relacionados à configuração por meio de verificações abrangentes de validação.<br><br><strong>Desafios:</strong><ul><li>Gerenciar dependências complexas entre mais de 40 microsserviços em ambientes de desenvolvimento, preparação e produção</li><li>Garantir conformidade de segurança enquanto mantém a velocidade de implantação</li><li>Suportar rollbacks e reconciliação de estado durante implantações com falha</li></ul><br><strong>Soluções:</strong><ul><li>Desenvolvi uma ferramenta de visualização de grafo de dependências e um algoritmo de sequenciamento para otimizar a ordem de implantação</li><li>Implementei verificação de segurança pré-implantação com integração de política como código</li><li>Criei um sistema de captura de estado que permite implantações atômicas com capacidade automática de rollback</li></ul>",
-            es: "Diseñé e implementé una solución de infraestructura como código que automatiza el despliegue y escalado de microservicios. El sistema redujo el tiempo de despliegue en un 87% y prácticamente eliminó los errores relacionados con la configuración mediante exhaustivas comprobaciones de validación.<br><br><strong>Desafíos:</strong><ul><li>Gestionar dependencias complejas entre más de 40 microservicios en entornos de desarrollo, pruebas y producción</li><li>Garantizar el cumplimiento de seguridad manteniendo la velocidad de despliegue</li><li>Soportar reversiones y reconciliación de estado durante despliegues fallidos</li></ul><br><strong>Soluciones:</strong><ul><li>Desarrollé una herramienta de visualización de grafos de dependencias y un algoritmo de secuenciación para optimizar el orden de despliegue</li><li>Implementé escaneo de seguridad previo al despliegue con integración de políticas como código</li><li>Creé un sistema de captura de estado que permite despliegues atómicos con capacidad de reversión automática</li></ul>"
+            en: "Automated 200+ multilingual articles/hour using BERT/GPT-2. Flask API handles 150+ RPS with AWS Comprehend integration. Reduced AWS costs 40% via spot instances. Auto-generated infographics cut design work by 70%. Includes text-to-video automation.Key Skills: NLP, Cloud Optimization, CI/CD",
+            fr: "Génération automatisée de 200+ articles multilingues/heure avec BERT/GPT-2. API Flask gère 150+ requêtes/seconde. Coûts AWS réduits de 40%. Infographies automatisées (70% moins de travail). Inclut automation texte-vidéo.Compétences Clés: NLP, Optimisation Cloud, CI/CD",
+            pt: "Geração automatizada de 200+ artigos multilíngues/hora com BERT/GPT-2. API Flask processa 150+ solicitações/segundo. Custos AWS reduzidos 40%. Infográficos automáticos (70% menos trabalho). Inclui automação texto-vídeo.Habilidades Principais: NLP, Otimização Nuvem, CI/CD",
+            es: "Generación automatizada de 200+ artículos multilingües/hora con BERT/GPT-2. API Flask maneja 150+ solicitudes/segundo. Costos AWS reducidos 40%. Infografías automáticas (70% menos trabajo). Incluye automatización texto-video.Habilidades Clave: NLP, Optimización Nube, CI/CD"
         },
-        imageUrl: "images/pic3.jpg",
-        tech: ["Terraform", "AWS", "Docker", "Kubernetes", "Jenkins", "Python", "Go"],
-        repoUrl: "https://github.com/livioangelim/cloud-deploy-automation",
-        docsUrl: "https://github.com/livioangelim/cloud-deploy-automation/wiki",
-        demoUrl: "",
-        videoUrl: "https://www.youtube.com/watch?v=example2"
+        imageUrl: "images/jornal-ia.jpg",
+        tech: ["Python", "NLP", "AWS", "BERT", "Flask", "Docker"],
+        repoUrl: "https://github.com/livioangelim/jornal-ia",
+        docsUrl: "https://github.com/livioangelim/jornal-ia/wiki",
+        demoUrl: "https://jornal-ia.livioangelim.com",
+        videoUrl: "https://youtube.com/jornal-ia-demo"
     },
     {
         id: "project4",
         titleKey: {
-            en: "Poker Hands Analyzer",
-            fr: "Analyseur de Mains de Poker",
-            pt: "Analisador de Mãos de Poker",
-            es: "Analizador de Manos de Póker"
+            en: "Parcel Routing System",
+            fr: "Système de Routage de Colis",
+            pt: "Sistema de Roteamento de Encomendas",
+            es: "Sistema de Enrutamiento de Paquetes"
         },
         descriptionKey: {
-            en: "Built a sophisticated application that analyzes poker hands in real-time and provides statistical insights to improve gameplay. The system can calculate odds, suggest optimal moves, and learn from previous game patterns to enhance strategy recommendations.<br><br><strong>Challenges:</strong><ul><li>Processing and analyzing card combinations in milliseconds to provide real-time feedback</li><li>Accurately detecting cards from various table layouts and lighting conditions</li><li>Creating an algorithm that adapts to different playing styles and opponents</li></ul><br><strong>Solutions:</strong><ul><li>Optimized combinatorial algorithms with memoization and parallel processing</li><li>Implemented computer vision with adaptive thresholding and template matching</li><li>Developed a Bayesian learning system that constructs player profiles based on historical actions</li></ul>",
-            fr: "Construit une application sophistiquée qui analyse les mains de poker en temps réel et fournit des informations statistiques pour améliorer le jeu. Le système peut calculer les cotes, suggérer des mouvements optimaux et apprendre des modèles de jeu précédents pour améliorer les recommandations de stratégie.<br><br><strong>Défis:</strong><ul><li>Traitement et analyse des combinaisons de cartes en millisecondes pour fournir un retour en temps réel</li><li>Détection précise des cartes à partir de différentes dispositions de table et conditions d'éclairage</li><li>Création d'un algorithme qui s'adapte aux différents styles de jeu et adversaires</li></ul><br><strong>Solutions:</strong><ul><li>Algorithmes combinatoires optimisés avec mémoïsation et traitement parallèle</li><li>Implémentation de la vision par ordinateur avec seuillage adaptatif et correspondance de modèles</li><li>Développement d'un système d'apprentissage bayésien qui construit des profils de joueurs basés sur les actions historiques</li></ul>",
-            pt: "Construí um aplicativo sofisticado que analisa mãos de poker em tempo real e fornece insights estatísticos para melhorar a jogabilidade. O sistema pode calcular probabilidades, sugerir movimentos ideais e aprender com padrões de jogos anteriores para aprimorar as recomendações de estratégia.<br><br><strong>Desafios:</strong><ul><li>Processar e analisar combinações de cartas em milissegundos para fornecer feedback em tempo real</li><li>Detectar com precisão cartas de vários layouts de mesa e condições de iluminação</li><li>Criar um algoritmo que se adapte a diferentes estilos de jogo e oponentes</li></ul><br><strong>Soluções:</strong><ul><li>Otimizei algoritmos combinatórios com memorização e processamento paralelo</li><li>Implementei visão computacional com limiarização adaptativa e correspondência de modelos</li><li>Desenvolvi um sistema de aprendizado Bayesiano que constrói perfis de jogadores com base em ações históricas</li></ul>",
-            es: "Construí una aplicación sofisticada que analiza manos de póker en tiempo real y proporciona información estadística para mejorar el juego. El sistema puede calcular probabilidades, sugerir movimientos óptimos y aprender de patrones de juegos anteriores para mejorar las recomendaciones estratégicas.<br><br><strong>Desafíos:</strong><ul><li>Procesar y analizar combinaciones de cartas en milisegundos para proporcionar retroalimentación en tiempo real</li><li>Detectar con precisión cartas de varias disposiciones de mesa y condiciones de iluminación</li><li>Crear un algoritmo que se adapte a diferentes estilos de juego y oponentes</li></ul><br><strong>Soluciones:</strong><ul><li>Optimicé algoritmos combinatorios con memoización y procesamiento paralelo</li><li>Implementé visión por computadora con umbralización adaptativa y coincidencia de plantillas</li><li>Desarrollé un sistema de aprendizaje bayesiano que construye perfiles de jugadores basados en acciones históricas</li></ul>"
+            en: "Optimized delivery routes by 40% using Nearest Neighbor Algorithm. O(1) package lookup via custom hash tables. Simulated GPS tracking for multi-truck logistics with 15+ constraint handling.Key Skills: Algorithm Design, Optimization",
+            fr: "Optimisation des itinéraires de livraison de 40% via algorithme du plus proche voisin. Recherche de colis en O(1) avec tables de hachage. Simulation GPS pour flottes avec gestion de 15+ contraintes.Compétences Clés: Conception d'Algorithmes, Optimisation",
+            pt: "Rotas de entrega otimizadas em 40% usando algoritmo do vizinho mais próximo. Busca O(1) via tabelas hash. Simulação GPS para frotas com 15+ restrições.Habilidades Principais: Design de Algoritmos, Otimização",
+            es: "Rutas de entrega optimizadas 40% con algoritmo del vecino más cercano. Búsqueda O(1) mediante tablas hash. Simulación GPS para flotas con 15+ restricciones.Habilidades Clave: Diseño de Algoritmos, Optimización"
         },
-        imageUrl: "images/poker.jpg",
-        tech: ["C++", "Qt", "OpenCV", "SQLite", "Statistical Analysis", "Computer Vision"],
-        repoUrl: "https://github.com/livioangelim/poker-analyzer",
-        docsUrl: "https://github.com/livioangelim/poker-analyzer/wiki",
-        demoUrl: "https://poker.livioangelim.com",
+        imageUrl: "images/parcel-routing.jpg",
+        tech: ["Python", "Algorithms", "GPS Simulation", "Hash Tables"],
+        repoUrl: "https://github.com/livioangelim/parcel-routing",
+        docsUrl: "https://github.com/livioangelim/parcel-routing/wiki",
+        demoUrl: "https://parcel-routing.livioangelim.com",
         videoUrl: ""
     },
     {
         id: "project5",
         titleKey: {
-            en: "Secure Messaging Platform",
-            fr: "Plateforme de Messagerie Sécurisée",
-            pt: "Plataforma de Mensagens Seguras",
-            es: "Plataforma de Mensajería Segura"
+            en: "EduFlow System",
+            fr: "Système EduFlow",
+            pt: "Sistema EduFlow",
+            es: "Sistema EduFlow"
         },
         descriptionKey: {
-            en: "Developed an end-to-end encrypted messaging platform that prioritizes user privacy and data security. The application features self-destructing messages, secure file sharing, and zero-knowledge architecture ensuring that even the server cannot access message content.<br><br><strong>Challenges:</strong><ul><li>Implementing true end-to-end encryption while maintaining excellent user experience</li><li>Building secure key exchange mechanisms resistant to man-in-the-middle attacks</li><li>Ensuring message delivery in unreliable network conditions while preserving security</li></ul><br><strong>Solutions:</strong><ul><li>Leveraged the Signal Protocol with custom UX optimizations for key verification</li><li>Implemented advanced cryptographic techniques including multi-device key synchronization</li><li>Created an intelligent message queue system with prioritized retries and partial message delivery</li></ul>",
-            fr: "Développé une plateforme de messagerie chiffrée de bout en bout qui donne la priorité à la confidentialité des utilisateurs et à la sécurité des données. L'application propose des messages à autodestruction, un partage de fichiers sécurisé et une architecture à connaissance zéro garantissant que même le serveur ne peut pas accéder au contenu des messages.<br><br><strong>Défis:</strong><ul><li>Mettre en œuvre un véritable chiffrement de bout en bout tout en maintenant une excellente expérience utilisateur</li><li>Mise en place de mécanismes d'échange de clés sécurisés résistants aux attaques d'homme du milieu</li><li>Assurer la livraison des messages dans des conditions de réseau peu fiables tout en préservant la sécurité</li></ul><br><strong>Solutions:</strong><ul><li>Exploité le protocole Signal avec des optimisations UX personnalisées pour la vérification des clés</li><li>Mise en œuvre de techniques cryptographiques avancées, y compris la synchronisation des clés multi-appareils</li><li>Création d'un système intelligent de file d'attente de messages avec des nouvelles tentatives priorisées et une livraison partielle des messages</li></ul>",
-            pt: "Desenvolvi uma plataforma de mensagens criptografadas de ponta a ponta que prioriza a privacidade do usuário e a segurança de dados. O aplicativo apresenta mensagens autodestrutivas, compartilhamento seguro de arquivos e arquitetura de conhecimento zero, garantindo que nem mesmo o servidor possa acessar o conteúdo das mensagens.<br><br><strong>Desafios:</strong><ul><li>Implementar criptografia real de ponta a ponta mantendo excelente experiência do usuário</li><li>Construir mecanismos seguros de troca de chaves resistentes a ataques man-in-the-middle</li><li>Garantir entrega de mensagens em condições de rede não confiáveis enquanto preserva a segurança</li></ul><br><strong>Soluções:</strong><ul><li>Aproveitei o Protocolo Signal com otimizações de UX personalizadas para verificação de chaves</li><li>Implementei técnicas criptográficas avançadas incluindo sincronização de chaves entre múltiplos dispositivos</li><li>Criei um sistema inteligente de fila de mensagens com retentativas priorizadas e entrega parcial de mensagens</li></ul>",
-            es: "Desarrollé una plataforma de mensajería cifrada de extremo a extremo que prioriza la privacidad del usuario y la seguridad de los datos. La aplicación incluye mensajes autodestructivos, intercambio seguro de archivos y arquitectura de conocimiento cero que garantiza que ni siquiera el servidor pueda acceder al contenido de los mensajes.<br><br><strong>Desafíos:</strong><ul><li>Implementar cifrado real de extremo a extremo manteniendo una excelente experiencia de usuario</li><li>Construir mecanismos seguros de intercambio de claves resistentes a ataques de intermediarios</li><li>Garantizar la entrega de mensajes en condiciones de red poco fiables preservando la seguridad</li></ul><br><strong>Soluciones:</strong><ul><li>Aproveché el Protocolo Signal con optimizaciones de UX personalizadas para verificación de claves</li><li>Implementé técnicas criptográficas avanzadas incluyendo sincronización de claves multidispositivo</li><li>Creé un sistema inteligente de cola de mensajes con reintentos priorizados y entrega parcial de mensajes</li></ul>"
+            en: "C++/Qt educational platform supporting 1k+ concurrent users. 99.9% uptime via multi-threading. AWS auto-scaling reduced server costs by 30%. Features SQLite integration and REST APIs.Key Skills: System Design, Concurrency",
+            fr: "Plateforme éducative C++/Qt pour 1k+ utilisateurs simultanés. Disponibilité 99,9% via multithreading. AWS auto-scaling réduit coûts 30%. Intègre SQLite et APIs REST.Compétences Clés: Conception Systèmes, Concurrence",
+            pt: "Plataforma educacional C++/Qt para 1k+ usuários simultâneos. 99,9% disponibilidade via multithreading. AWS auto-scaling reduziu custos 30%. Integra SQLite e APIs REST.Habilidades Principais: Design de Sistemas, Concorrência",
+            es: "Plataforma educativa C++/Qt para 1k+ usuarios concurrentes. 99,9% disponibilidad mediante multihilos. AWS auto-scaling redujo costos 30%. Integra SQLite y APIs REST.Habilidades Clave: Diseño de Sistemas, Concurrencia"
         },
-        imageUrl: "images/pic4.jpg",
-        tech: ["TypeScript", "React", "Node.js", "WebRTC", "Signal Protocol", "IndexedDB", "WebSockets"],
-        repoUrl: "https://github.com/livioangelim/secure-messaging",
-        docsUrl: "https://github.com/livioangelim/secure-messaging/wiki",
-        demoUrl: "https://secure-msg.livioangelim.com",
-        videoUrl: "https://www.youtube.com/watch?v=example3"
+        imageUrl: "images/eduflow.jpg",
+        tech: ["C++", "Qt", "SQLite", "AWS", "Docker"],
+        repoUrl: "https://github.com/livioangelim/eduflow",
+        docsUrl: "https://github.com/livioangelim/eduflow/wiki",
+        demoUrl: "https://eduflow.livioangelim.com",
+        videoUrl: ""
     }
 ];

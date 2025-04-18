@@ -18,32 +18,38 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 
 ### April 2025 Update - Phase 1: Enhanced Content
 
-#### 1. SEO Optimization
+#### 1. Project Filtering Improvements
+- Enhanced project filtering functionality to allow toggling of all filter buttons including the "All" filter
+- Improved filter button behavior for more intuitive user interaction
+- Updated filter logic to provide consistent selection/deselection behavior across all filters
+- Fixed edge case scenarios where filter state could become inconsistent
+
+#### 2. SEO Optimization
 - Added comprehensive meta tags for improved search engine indexing
 - Implemented Open Graph and Twitter Card metadata for better social media sharing
 - Added canonical URL to prevent duplicate content issues
 - Enhanced title and description tags with relevant keywords
 
-#### 2. Enhanced Project Descriptions
+#### 3. Enhanced Project Descriptions
 - Expanded all project descriptions with "Challenges" and "Solutions" sections
 - Added detailed technical problem descriptions and innovative solutions
 - Improved technology stack listings to showcase technical depth
 - Enhanced presentation of project accomplishments with quantifiable metrics
 
-#### 3. Contact Form Implementation
+#### 4. Contact Form Implementation
 - Created a responsive contact form with fields for name, email, subject, and message
 - Implemented form validation and user feedback mechanisms
 - Added contact information and location details
 - Integrated social media links for additional contact options
 - Styled to match the overall design aesthetic
 
-#### 4. Initial Multilingual Support (April 2025 - Phase 0)
+#### 5. Initial Multilingual Support (April 2025 - Phase 0)
 - Added complete translations in **English**, **French**, **Portuguese**, and **Spanish**
 - Implemented a language switcher in the navigation bar
 - Created a system to persist language preferences using localStorage
 - Structured translations in a maintainable data format
 
-#### 5. Modern UI Redesign (April 2025 - Phase 0)
+#### 6. Modern UI Redesign (April 2025 - Phase 0)
 - Redesigned with inspiration from professional developer portfolios
 - Added subtle animations and hover effects
 - Enhanced typography and color scheme
