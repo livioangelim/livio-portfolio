@@ -11,6 +11,9 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 - **Smooth Scroll & Transitions**: Smooth scrolling experience and CSS transitions to give a modern and fluid feel to the site.
 - **Multilingual Support**: Full website translation in English, French, Portuguese, and Spanish with language preference persistence.
 - **Enhanced Project Showcase**: Interactive project cards with detailed modal views featuring repositories, documentation, demos, and videos.
+- **Dark/Light Theme Toggle**: A customizable theme system allowing users to switch between dark and light modes, with preference saved for future visits.
+- **Project Filtering System**: Advanced filtering capabilities to sort projects by technology, type, or category for easier navigation.
+- **Lazy Loading**: Performance optimization through lazy loading of images and videos, improving page load speed and user experience.
 - **Contact Form**: A dedicated contact section with a functional form for potential clients or employers to reach out directly.
 - **SEO Optimized**: Comprehensive metadata including Open Graph and Twitter Card support for better search engine visibility and social sharing.
 
@@ -56,12 +59,36 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 - Improved spacing and section layouts
 - Added decorative styling to profile image
 
+### April 2025 Update - Phase 2: Performance & User Experience
+
+#### 1. Dark/Light Theme Toggle Implementation
+- Added a theme toggle switch in the navigation bar
+- Implemented comprehensive theme styling across all page elements
+- Created smooth transition animations between themes
+- Developed theme preference persistence using localStorage
+- Included automatic theme detection based on user's system preferences
+
+#### 2. Project Filtering System Enhancement
+- Implemented multi-criteria filtering for the projects section
+- Created interactive filter buttons with visual feedback
+- Added the ability to filter projects by technology stack, project type, and complexity
+- Designed intuitive toggling behavior for all filter buttons including the "All" filter
+- Optimized filter logic for consistent selection/deselection behavior
+
+#### 3. Lazy Loading Implementation
+- Created a dedicated lazy loading system (lazyLoad.js) for optimal performance
+- Implemented the Intersection Observer API for efficient resource loading
+- Added support for lazy loading of images, videos, and iframes
+- Included fallback mechanisms for browsers without Observer API support
+- Optimized to refresh lazy loading for dynamically added content
+- Added placeholder images during the loading process
+
 ## Technologies Used
 
 - **HTML5, CSS3, JavaScript**: For building the structure, layout, and interactions.
 - **Font Awesome**: For adding social media icons and other vector icons.
 - **Google Fonts (Inria Sans, Inter, Kanit)**: For modern and clean typography.
-- **Custom JavaScript (script.js)**: Manages the interactive components such as sticky navbar, scroll effects, skill animations, language switching, project modals, and form handling.
+- **Custom JavaScript (script.js)**: Manages the interactive components such as sticky navbar, scroll effects, skill animations, language switching, project modals, form handling, theme toggling, and lazy loading.
 
 ## Sections Overview
 
@@ -91,9 +118,7 @@ A dedicated section that allows visitors to get in touch directly through a form
 
 ## Planned Future Improvements
 
-### Phase 2: Advanced Functionality (Planned for June 2025)
-- Implement dark/light theme toggle
-- Add filtering capabilities to the projects section
+### Phase 2: Advanced Functionality
 - Create a blog section for technical articles
 - Implement lazy loading for images and videos
 - Add animations triggered by scroll position
@@ -140,7 +165,8 @@ livio-portfolio/
 ├── script.js               # Core JavaScript functionality
 ├── js/                     # JavaScript modules
 │   ├── translations.js     # Language translations
-│   └── projects.js         # Project data
+│   ├── projects.js         # Project data
+│   └── lazyLoad.js         # Lazy loading functionality
 ├── images/                 # Image assets
 │   ├── livio.jpg           # Profile picture
 │   ├── pic1.jpg            # Project thumbnails

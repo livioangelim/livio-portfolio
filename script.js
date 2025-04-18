@@ -147,7 +147,7 @@ function filterProjects() {
             card.style.display = 'flex';
             return;
         }
-        
+
         // If no filters are active, hide all projects
         if (activeFilters.length === 0) {
             card.style.display = 'none';
@@ -174,7 +174,7 @@ function handleAllFilterButton() {
     allFilterBtn.addEventListener('click', () => {
         // Toggle active class on "All" button like other filter buttons
         allFilterBtn.classList.toggle('active');
-        
+
         // Apply filtering based on currently active filters
         filterProjects();
     });
@@ -193,6 +193,7 @@ function initializeProjectFiltering() {
 }
 
 // Function to generate project cards
+// Function to generate project cards
 function generateProjectCards() {
     if (!projectsGrid) return;
 
@@ -209,9 +210,13 @@ function generateProjectCards() {
         const plainText = tempDiv.textContent || tempDiv.innerText;
         const summaryText = plainText.substring(0, 100) + '...';
 
-        // Create card HTML
+        // Create card HTML with lazy loading for image
         projectCard.innerHTML = `
-            <img src="${project.imageUrl}" alt="${project.titleKey[currentLanguage]}" class="project-card-image">
+            <img class="project-card-image lazy-load" 
+                 src="images/placeholder.jpg" 
+                 data-src="${project.imageUrl}" 
+                 alt="${project.titleKey[currentLanguage]}" 
+                 loading="lazy">
             <div class="project-card-content">
                 <h3 class="project-card-title">${project.titleKey[currentLanguage]}</h3>
                 <p>${summaryText}</p>
@@ -227,6 +232,11 @@ function generateProjectCards() {
         // Append to grid
         projectsGrid.appendChild(projectCard);
     });
+
+    // Refresh lazy loading for newly added images
+    if (typeof refreshLazyLoading === 'function') {
+        refreshLazyLoading();
+    }
 }
 
 // Call this in your document ready function
@@ -240,7 +250,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 // Function to open project modal
+// Function to open project modal
 function openProjectModal(project) {
+    if (!projectModal) return;
+
     // Populate modal with project info
     const modalTitle = projectModal.querySelector('.project-title');
     const modalDescription = projectModal.querySelector('.project-description');
@@ -251,57 +264,66 @@ function openProjectModal(project) {
     const demoLink = projectModal.querySelector('.demo-link');
     const videoLink = projectModal.querySelector('.video-link');
 
-    // Set title and description in current language
+    // Set title in current language
     modalTitle.textContent = project.titleKey[currentLanguage];
-    modalDescription.textContent = project.descriptionKey[currentLanguage];
+
+    // Use innerHTML for description to properly render HTML tags
+    modalDescription.innerHTML = project.descriptionKey[currentLanguage];
 
     // Clear and populate tech stack
     modalTechStack.innerHTML = '';
     project.tech.forEach(tech => {
-        const techSpan = document.createElement('span');
-        techSpan.textContent = tech;
-        modalTechStack.appendChild(techSpan);
+        const techBadge = document.createElement('span');
+        techBadge.classList.add('tech-badge');
+        techBadge.textContent = tech;
+        modalTechStack.appendChild(techBadge);
     });
 
-    // Set media (image or video)
-    if (project.videoUrl && project.videoUrl.includes('youtube')) {
-        // Extract YouTube video ID
+    // Set project media (image or video) with lazy loading
+    modalMedia.innerHTML = '';
+    if (project.videoUrl && project.videoUrl !== '') {
+        // If project has a video, embed it with lazy loading
         const videoId = project.videoUrl.split('v=')[1] || project.videoUrl.split('/').pop();
         modalMedia.innerHTML = `
-            <iframe width="100%" height="315" 
-                src="https://www.youtube.com/embed/${videoId}" 
-                title="${project.titleKey[currentLanguage]}" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+            <iframe class="lazy-load" 
+                    width="100%" 
+                    height="315" 
+                    data-src="https://www.youtube.com/embed/${videoId}" 
+                    title="${project.titleKey[currentLanguage]}" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
         `;
     } else {
-        modalMedia.innerHTML = `<img src="${project.imageUrl}" alt="${project.titleKey[currentLanguage]}">`;
+        // Otherwise, display the image with lazy loading
+        modalMedia.innerHTML = `
+            <img class="lazy-load" 
+                 src="images/placeholder.jpg" 
+                 data-src="${project.imageUrl}" 
+                 alt="${project.titleKey[currentLanguage]}" 
+                 loading="lazy">
+        `;
     }
 
     // Set links
-    repoLink.href = project.repoUrl;
-    docsLink.href = project.docsUrl;
+    repoLink.style.display = project.repoUrl ? 'inline-block' : 'none';
+    docsLink.style.display = project.docsUrl ? 'inline-block' : 'none';
+    demoLink.style.display = project.demoUrl ? 'inline-block' : 'none';
+    videoLink.style.display = project.videoUrl ? 'inline-block' : 'none';
 
-    // Handle optional links
-    if (project.demoUrl) {
-        demoLink.href = project.demoUrl;
-        demoLink.style.display = 'inline-block';
-    } else {
-        demoLink.style.display = 'none';
-    }
-
-    if (project.videoUrl) {
-        videoLink.href = project.videoUrl;
-        videoLink.style.display = 'inline-block';
-    } else {
-        videoLink.style.display = 'none';
-    }
+    if (project.repoUrl) repoLink.href = project.repoUrl;
+    if (project.docsUrl) docsLink.href = project.docsUrl;
+    if (project.demoUrl) demoLink.href = project.demoUrl;
+    if (project.videoUrl) videoLink.href = project.videoUrl;
 
     // Show modal
     projectModal.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
+    document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+
+    // Refresh lazy loading for newly added media in modal
+    if (typeof refreshLazyLoading === 'function') {
+        refreshLazyLoading();
+    }
 }
 
 // Function to close modal
