@@ -47,6 +47,14 @@ const translations = {
         project_demo: "Live Demo",
         project_video: "Watch Video",
 
+        // Articles section
+        nav_blog: "Articles",
+        articles_title: "Technical Articles",
+        articles_description: "Explore my technical articles imported from LinkedIn, covering software engineering, AI, and technology trends.",
+        read_article: "Read Article",
+        loading_articles: "Loading articles...",
+        no_articles: "No articles found matching this filter.",
+
         // Contact section
         contact_title: "Contact Me",
         contact_intro: "I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision. Feel free to reach out using the form or via direct email.",
@@ -105,6 +113,14 @@ const translations = {
         project_docs: "Documentation",
         project_demo: "Démo en Direct",
         project_video: "Regarder la Vidéo",
+
+        // Articles section
+        nav_blog: "Articles",
+        articles_title: "Articles Techniques",
+        articles_description: "Explorez mes articles techniques importés de LinkedIn, couvrant l'ingénierie logicielle, l'IA et les tendances technologiques.",
+        read_article: "Lire l'Article",
+        loading_articles: "Chargement des articles...",
+        no_articles: "Aucun article trouvé correspondant à ce filtre.",
 
         // Contact section
         contact_title: "Contactez-Moi",
@@ -165,6 +181,14 @@ const translations = {
         project_demo: "Demo ao Vivo",
         project_video: "Assistir Vídeo",
 
+        // Articles section
+        nav_blog: "Artigos",
+        articles_title: "Artigos Técnicos",
+        articles_description: "Explore meus artigos técnicos importados do LinkedIn, abordando engenharia de software, IA e tendências tecnológicas.",
+        read_article: "Ler Artigo",
+        loading_articles: "Carregando artigos...",
+        no_articles: "Nenhum artigo encontrado correspondente a este filtro.",
+
         // Contact section
         contact_title: "Contate-me",
         contact_intro: "Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte da sua visão. Sinta-se à vontade para entrar em contato usando o formulário ou via email direto.",
@@ -223,6 +247,14 @@ const translations = {
         project_docs: "Documentación",
         project_demo: "Demo en Vivo",
         project_video: "Ver Vídeo",
+
+        // Articles section
+        nav_blog: "Artículos",
+        articles_title: "Artículos Técnicos",
+        articles_description: "Explore mis artículos técnicos importados de LinkedIn, que cubren ingeniería de software, IA y tendencias tecnológicas.",
+        read_article: "Leer Artículo",
+        loading_articles: "Cargando artículos...",
+        no_articles: "No se encontraron artículos que coincidan con este filtro.",
 
         // Contact section
         contact_title: "Contáctame",

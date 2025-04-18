@@ -75,6 +75,11 @@ function setLanguage(lang) {
     // Reload projects in new language
     generateProjectCards();
 
+    // Refresh articles if articles.js is loaded
+    if (typeof refreshArticles === 'function') {
+        refreshArticles();
+    }
+
     // Save language preference to localStorage
     localStorage.setItem('preferredLanguage', lang);
 }
@@ -193,7 +198,6 @@ function initializeProjectFiltering() {
 }
 
 // Function to generate project cards
-// Function to generate project cards
 function generateProjectCards() {
     if (!projectsGrid) return;
 
@@ -249,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
     generateProjectCards();
 
 });
-// Function to open project modal
+
 // Function to open project modal
 function openProjectModal(project) {
     if (!projectModal) return;

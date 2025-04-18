@@ -18,7 +18,7 @@ const projectsData = [
             pt: "Sistema de aprovação de empréstimos automatizado reduzindo processamento de 5 dias para 2 segundos (88% precisão). Modelo de regressão logística (ROC-AUC: 0,90) via API Flask (47ms). Pipeline automatizado com SMOTE e painéis interativos.Habilidades Principais: Modelagem ML, Desenvolvimento API, Visualização",
             es: "Sistema de aprobación de préstamos automatizado reduciendo procesamiento de 5 días a 2 segundos (88% precisión). Modelo de regresión logística (ROC-AUC: 0,90) mediante API Flask (47ms). Pipeline automatizado con SMOTE y paneles interactivos.Habilidades Clave: Modelado ML, Desarrollo API, Visualización"
         },
-        imageUrl: "images/loan-checker.png",
+        imageUrl: "images/projects/loan-checker.png",
         tech: ["Python", "TensorFlow", "Flask", "Pandas", "SMOTE", "Matplotlib"],
         repoUrl: "https://github.com/livioangelim/loan-eligibility-checker",
         docsUrl: "https://github.com/livioangelim/loan-eligibility-checker/wiki",
@@ -39,7 +39,7 @@ const projectsData = [
             pt: "Aplicativo empresarial Java/Spring Boot com frontend Angular. Confiabilidade API 99,8% via testes JUnit/Postman (25% menos erros). CI/CD automatizado com Docker/AWS (implantações 40% mais rápidas). Suporta 10k+ usuários.Habilidades Principais: Microserviços, Testes, DevOps",
             es: "Aplicación empresarial Java/Spring Boot con interfaz Angular. Confiabilidad API 99,8% mediante pruebas JUnit/Postman (25% menos errores). CI/CD automatizado con Docker/AWS (despliegues 40% más rápidos). Soporta 10k+ usuarios.Habilidades Clave: Microservicios, Pruebas, DevOps"
         },
-        imageUrl: "images/global-app.png",
+        imageUrl: "images/projects/global-app.png",
         tech: ["Java", "Spring Boot", "Angular", "AWS", "Docker", "SQL"],
         repoUrl: "https://github.com/livioangelim/global-app-suite",
         docsUrl: "https://github.com/livioangelim/global-app-suite/wiki",
@@ -60,7 +60,7 @@ const projectsData = [
             pt: "Geração automatizada de 200+ artigos multilíngues/hora. Pipeline BERT/GPT-2 + API 150 solicitações/segundo. Instâncias spot AWS reduziram custos em 40%. Adaptação dialectal regional via spaCy para conteúdo EN/PT/ES.Habilidades Principais: NLP, Otimização Nuvem, CI/CD",
             es: "Generación automatizada de 200+ artículos multilingües/hora. Pipeline BERT/GPT-2 + API 150 solicitudes/segundo. Instancias spot AWS redujeron costos 40%. Adaptación dialectal regional mediante spaCy para contenido EN/ES/PT.Habilidades Clave: NLP, Optimización Nube, CI/CD"
         },
-        imageUrl: "images/jornal-ia.png",
+        imageUrl: "images/projects/jornal-ia.png",
         tech: ["Python", "NLP", "AWS", "Docker", "spaCy"],
         repoUrl: "https://github.com/livioangelim/jornal-ia",
         docsUrl: "https://github.com/livioangelim/jornal-ia/wiki",
@@ -81,7 +81,7 @@ const projectsData = [
             pt: "Automação de noticiários em vídeo a partir de texto. Infográficos Pandas/Matplotlib + chatbot para perguntas. Uso de AWS Transcribe para narração multilíngue. Geração de 50+ vídeos diários.Habilidades Principais: NLP, Visualização de Dados, Integração Chatbot",
             es: "Automatización de noticieros en video desde texto. Infografías Pandas/Matplotlib + chatbot para preguntas. Uso de AWS Transcribe para narración multilingüe. Generación de 50+ videos diarios.Habilidades Clave: NLP, Visualización Datos, Integración Chatbot"
         },
-        imageUrl: "images/ai-video.png",
+        imageUrl: "images/projects/ai-video.png",
         tech: ["Python", "NLP", "AWS", "Docker", "Transcribe"],
         repoUrl: "https://github.com/livioangelim/ai-video-journalism",
         docsUrl: "https://github.com/livioangelim/ai-video-journalism/wiki",
@@ -102,7 +102,7 @@ const projectsData = [
             pt: "Rotas de entrega otimizadas em 40% usando algoritmo do vizinho mais próximo. Busca O(1) via tabelas hash. Simulação GPS para frotas com 15+ restrições.Habilidades Principais: Design de Algoritmos, Otimização",
             es: "Rutas de entrega optimizadas 40% con algoritmo del vecino más cercano. Búsqueda O(1) mediante tablas hash. Simulación GPS para flotas con 15+ restricciones.Habilidades Clave: Diseño de Algoritmos, Optimización"
         },
-        imageUrl: "images/parcel-routing.png",
+        imageUrl: "images/projects/parcel-routing.png",
         tech: ["Python", "Algorithms", "GPS Simulation", "Hash Tables"],
         repoUrl: "https://github.com/livioangelim/parcel-routing",
         docsUrl: "https://github.com/livioangelim/parcel-routing/wiki",
@@ -123,7 +123,7 @@ const projectsData = [
             pt: "Plataforma educacional C++/Qt para 1k+ usuários simultâneos. 99,9% disponibilidade via multithreading. AWS auto-scaling reduziu custos 30%. Integra SQLite e APIs REST.Habilidades Principais: Design de Sistemas, Concorrência",
             es: "Plataforma educativa C++/Qt para 1k+ usuarios concurrentes. 99,9% disponibilidad mediante multihilos. AWS auto-scaling redujo costos 30%. Integra SQLite y APIs REST.Habilidades Clave: Diseño de Sistemas, Concurrencia"
         },
-        imageUrl: "images/eduflow.png",
+        imageUrl: "images/projects/eduflow.png",
         tech: ["C++", "Qt", "SQLite", "AWS", "Docker"],
         repoUrl: "https://github.com/livioangelim/eduflow",
         docsUrl: "https://github.com/livioangelim/eduflow/wiki",

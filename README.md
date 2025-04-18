@@ -46,13 +46,22 @@ Hey there, welcome to my personal portfolio website! This is where I showcase my
 - Integrated social media links for additional contact options
 - Styled to match the overall design aesthetic
 
-#### 5. Initial Multilingual Support (April 2025 - Phase 0)
+#### 5. Articles Section Implementation
+- Added a dedicated articles section to showcase technical writing and thought leadership
+- Implemented responsive article cards with images, titles, descriptions, and metadata
+- Created an intelligent filtering system by article tags (AI, Algorithms, Culture, etc.)
+- Added "Read Article" buttons linking to the original publication sources
+- Integrated with the translation system for multilingual article content
+- Implemented lazy loading for article images to improve performance
+- Added empty state handling when no articles match selected filters
+
+#### 6. Initial Multilingual Support (April 2025 - Phase 0)
 - Added complete translations in **English**, **French**, **Portuguese**, and **Spanish**
 - Implemented a language switcher in the navigation bar
 - Created a system to persist language preferences using localStorage
 - Structured translations in a maintainable data format
 
-#### 6. Modern UI Redesign (April 2025 - Phase 0)
+#### 7. Modern UI Redesign (April 2025 - Phase 0)
 - Redesigned with inspiration from professional developer portfolios
 - Added subtle animations and hover effects
 - Enhanced typography and color scheme
@@ -118,12 +127,8 @@ A dedicated section that allows visitors to get in touch directly through a form
 
 ## Planned Future Improvements
 
-### Phase 2: Advanced Functionality
-- Create a blog section for technical articles
-- Implement lazy loading for images and videos
-- Add animations triggered by scroll position
-
 ### Phase 3: Performance Optimization (Planned for July 2025)
+- Add animations triggered by scroll position
 - Optimize image loading and compression
 - Implement service workers for offline capability
 - Add analytics to track user engagement
@@ -159,19 +164,23 @@ The portfolio is publicly accessible online. You can explore the live version by
 ## Project Structure
 
 ```
-livio-portfolio/
-├── index.html              # Main HTML file
-├── style.css               # Main CSS styles
-├── script.js               # Core JavaScript functionality
-├── js/                     # JavaScript modules
-│   ├── translations.js     # Language translations
+lvo-portfolio/
+├── js/
+│   ├── translations.js     # Stores text translations
+│   ├── articles.js         # Articles data
 │   ├── projects.js         # Project data
-│   └── lazyLoad.js         # Lazy loading functionality
-├── images/                 # Image assets
-│   ├── livio.jpg           # Profile picture
-│   ├── pic1.jpg            # Project thumbnails
-│   └── ...
-└── README.md               # This documentation file
+│   ├── lazyLoad.js         # Lazy Loading implementation
+│   └── script.js           # Main JavaScript functionality
+├── images/
+│   ├── Articles/           # Image assets subdirectory for articles
+│   ├── projects/           # Image assets subdirectory for projects   
+│   ├── lvo-dark.jpg        # Logo file
+│   ├── lvo-light.jpg       # Logo file
+│   └── livio.jpg           # Profile picture
+├── css/
+│   └── style.css           # Main CSS styles
+├── index.html              # Main HTML file (the single page)
+└── README.md               # Project documentation file
 ```
 
 ## License
