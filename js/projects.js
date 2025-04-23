@@ -22,7 +22,7 @@ const projectsData = [
         tech: ["Python", "Flask", "Pandas", "NumPy", "Scikit-Learn", "Matplotlib", "Seaborn", "Joblib", "SMOTE"],
         repoUrl: "https://github.com/livioangelim/loan-eligibility-checker",
         docsUrl: "https://github.com/livioangelim/loan-eligibility-checker/blob/main/technical-documentation.md",
-        demoUrl: "https://loan-checker.livioangelim.com",
+        demoUrl: "",
         videoUrl: ""
     },
     {
