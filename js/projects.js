@@ -19,9 +19,9 @@ const projectsData = [
             es: "Sistema de aprobación de préstamos automatizado reduciendo procesamiento de 5 días a 2 segundos (88% precisión). Modelo de regresión logística (ROC-AUC: 0,90) mediante API Flask (47ms). Pipeline automatizado con SMOTE y paneles interactivos.Habilidades Clave: Modelado ML, Desarrollo API, Visualización"
         },
         imageUrl: "images/projects/loan-checker.png",
-        tech: ["Python", "TensorFlow", "Flask", "Pandas", "SMOTE", "Matplotlib"],
+        tech: ["Python", "Flask", "Pandas", "NumPy", "Scikit-Learn", "Matplotlib", "Seaborn", "Joblib", "SMOTE"],
         repoUrl: "https://github.com/livioangelim/loan-eligibility-checker",
-        docsUrl: "https://github.com/livioangelim/loan-eligibility-checker/wiki",
+        docsUrl: "https://github.com/livioangelim/loan-eligibility-checker/blob/main/technical-documentation.md",
         demoUrl: "https://loan-checker.livioangelim.com",
         videoUrl: ""
     },
@@ -42,8 +42,8 @@ const projectsData = [
         imageUrl: "images/projects/global-app.png",
         tech: ["Java", "Spring Boot", "Angular", "AWS", "Docker", "SQL"],
         repoUrl: "https://github.com/livioangelim/global-app-suite",
-        docsUrl: "https://github.com/livioangelim/global-app-suite/wiki",
-        demoUrl: "https://global-app.livioangelim.com",
+        docsUrl: "https://github.com/livioangelim/global-application-suite/blob/main/TECHNICAL_DOCUMENTATION.md",
+        demoUrl: "",
         videoUrl: ""
     },
     {
@@ -62,9 +62,9 @@ const projectsData = [
         },
         imageUrl: "images/projects/jornal-ia.png",
         tech: ["Python", "NLP", "AWS", "Docker", "spaCy"],
-        repoUrl: "https://github.com/livioangelim/jornal-ia",
-        docsUrl: "https://github.com/livioangelim/jornal-ia/wiki",
-        demoUrl: "https://jornal-ia.livioangelim.com",
+        repoUrl: "",
+        docsUrl: "",
+        demoUrl: "",
         videoUrl: ""
     },
     {
@@ -83,10 +83,10 @@ const projectsData = [
         },
         imageUrl: "images/projects/ai-video.png",
         tech: ["Python", "NLP", "AWS", "Docker", "Transcribe"],
-        repoUrl: "https://github.com/livioangelim/ai-video-journalism",
-        docsUrl: "https://github.com/livioangelim/ai-video-journalism/wiki",
-        demoUrl: "https://ai-video.livioangelim.com",
-        videoUrl: "https://youtube.com/ai-video-demo"
+        repoUrl: "",
+        docsUrl: "",
+        demoUrl: "",
+        videoUrl: ""
     },
     {
         id: "project5",
@@ -105,8 +105,8 @@ const projectsData = [
         imageUrl: "images/projects/parcel-routing.png",
         tech: ["Python", "Algorithms", "GPS Simulation", "Hash Tables"],
         repoUrl: "https://github.com/livioangelim/parcel-routing",
-        docsUrl: "https://github.com/livioangelim/parcel-routing/wiki",
-        demoUrl: "https://parcel-routing.livioangelim.com",
+        docsUrl: "",
+        demoUrl: "",
         videoUrl: ""
     },
     {
@@ -125,9 +125,9 @@ const projectsData = [
         },
         imageUrl: "images/projects/eduflow.png",
         tech: ["C++", "Qt", "SQLite", "AWS", "Docker"],
-        repoUrl: "https://github.com/livioangelim/eduflow",
-        docsUrl: "https://github.com/livioangelim/eduflow/wiki",
-        demoUrl: "https://eduflow.livioangelim.com",
+        repoUrl: "",
+        docsUrl: "",
+        demoUrl: "",
         videoUrl: ""
     }
 ];
