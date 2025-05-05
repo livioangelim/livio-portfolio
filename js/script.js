@@ -123,10 +123,16 @@ function createFilterButtons() {
 
         // Add click event listener
         button.addEventListener('click', () => {
+            // Deactivate "None" button when any skill button is clicked
+            const noneButton = document.querySelector('.filter-btn[data-filter="none"]');
+            if (noneButton && noneButton.classList.contains('active')) {
+                noneButton.classList.remove('active');
+            }
+
             // Toggle active class on this button
             button.classList.toggle('active');
 
-            // Get all active filters
+            // Apply filtering
             filterProjects();
         });
 
@@ -140,22 +146,25 @@ function filterProjects() {
     const activeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.getAttribute('data-filter'));
 
-    // If "All" filter is active or no filters are active, show all projects
+    // Check if "All" filter is active
     const allFilterActive = activeFilters.includes('all');
+
+    // Check if "None" filter is active
+    const noneFilterActive = activeFilters.includes('none');
 
     projectCards.forEach(card => {
         const projectId = card.getAttribute('data-id');
         const project = projectsData.find(p => p.id === projectId);
 
-        // If "All" filter is active, show all projects
-        if (allFilterActive) {
-            card.style.display = 'flex';
+        // If "None" filter is active, hide all projects
+        if (noneFilterActive) {
+            card.style.display = 'none';
             return;
         }
 
-        // If no filters are active, hide all projects
-        if (activeFilters.length === 0) {
-            card.style.display = 'none';
+        // If "All" filter is active or no filters are active, show all projects
+        if (allFilterActive || activeFilters.length === 0) {
+            card.style.display = 'flex';
             return;
         }
 
@@ -173,12 +182,29 @@ function filterProjects() {
 // Function to handle the "All" filter button
 function handleAllFilterButton() {
     const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    const noneFilterBtn = document.querySelector('.filter-btn[data-filter="none"]');
 
     if (!allFilterBtn) return;
 
     allFilterBtn.addEventListener('click', () => {
-        // Toggle active class on "All" button like other filter buttons
-        allFilterBtn.classList.toggle('active');
+        // If "All" is being activated
+        if (!allFilterBtn.classList.contains('active')) {
+            // Activate "All" and all skill buttons
+            allFilterBtn.classList.add('active');
+
+            // Activate all skill buttons except "None"
+            document.querySelectorAll('.filter-btn:not([data-filter="all"]):not([data-filter="none"])').forEach(btn => {
+                btn.classList.add('active');
+            });
+
+            // Deactivate "None" button
+            if (noneFilterBtn) {
+                noneFilterBtn.classList.remove('active');
+            }
+        } else {
+            // If "All" is already active, just toggle it
+            allFilterBtn.classList.toggle('active');
+        }
 
         // Apply filtering based on currently active filters
         filterProjects();
@@ -188,6 +214,39 @@ function handleAllFilterButton() {
 // Initialize project filtering
 function initializeProjectFiltering() {
     createFilterButtons();
+
+    // Get the project filters container
+    const projectFilters = document.querySelector('.project-filters');
+
+    // Add the "None" button after the "All" button
+    const noneButton = document.createElement('button');
+    noneButton.classList.add('filter-btn');
+    noneButton.setAttribute('data-filter', 'none');
+    noneButton.textContent = 'None';
+
+    // Add click event listener
+    noneButton.addEventListener('click', () => {
+        // Toggle active class on this button
+        noneButton.classList.toggle('active');
+
+        // If None is activated, deactivate "All" and other filters
+        if (noneButton.classList.contains('active')) {
+            const allFilters = document.querySelectorAll('.filter-btn:not([data-filter="none"])');
+            allFilters.forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+
+        // Apply filtering based on currently active filters
+        filterProjects();
+    });
+
+    // Insert "None" button after "All" button
+    const allButton = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allButton && projectFilters) {
+        projectFilters.insertBefore(noneButton, allButton.nextSibling);
+    }
+
     handleAllFilterButton();
 
     // Make sure the "All" filter is active by default
@@ -547,4 +606,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize bio expansion hover animation
     initializeBioExpansion();
+
+    // When loading the site, ensure "All" is active and all skill buttons are selected as standard
+    const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allFilterBtn) {
+        allFilterBtn.classList.add('active');
+
+        // Activate all skill filters (except None)
+        document.querySelectorAll('.filter-btn:not([data-filter="all"]):not([data-filter="none"])').forEach(btn => {
+            btn.classList.add('active');
+        });
+
+        // Apply filtering
+        filterProjects();
+    }
 });
