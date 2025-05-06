@@ -178,7 +178,7 @@ livio-portfolio/
 │   ├── projects/           # Image assets subdirectory for projects   
 │   ├── lvo-dark.jpg        # Logo file
 │   ├── lvo-light.jpg       # Logo file
-│   └── livio.jpg           # Profile picture
+│   └── livio.png           # Profile picture
 ├── style.css               # Main CSS styles
 ├── index.html              # Main HTML file (the single page)
 └── README.md               # Project documentation file
