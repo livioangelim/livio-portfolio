@@ -370,28 +370,28 @@ function initializeBioModal() {
     const closeBioModal = document.querySelector('.close-bio-modal');
     const bioContent = document.querySelector('.bio-content');
     const expandedBio = document.querySelector('.expanded-bio');
-    
+
     if (!bioModalBtn || !bioModal || !closeBioModal || !bioContent || !expandedBio) return;
-    
+
     // Open modal when clicking the bio button (only visible on mobile)
     bioModalBtn.addEventListener('click', () => {
         // Get bio content from the expanded-bio div
         const bioHTML = expandedBio.innerHTML;
-        
+
         // Populate the modal with the full bio content
         bioContent.innerHTML = bioHTML;
-        
+
         // Show the modal
         bioModal.style.display = 'block';
         document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
     });
-    
+
     // Close modal when clicking X button
     closeBioModal.addEventListener('click', () => {
         bioModal.style.display = 'none';
         document.body.style.overflow = 'auto'; // Restore scrolling
     });
-    
+
     // Close modal when clicking outside content
     window.addEventListener('click', event => {
         if (event.target === bioModal) {
@@ -399,7 +399,7 @@ function initializeBioModal() {
             document.body.style.overflow = 'auto';
         }
     });
-    
+
     // Close modal with Escape key
     document.addEventListener('keydown', event => {
         if (event.key === 'Escape' && bioModal.style.display === 'block') {

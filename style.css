@@ -612,7 +612,8 @@ a:hover {
     margin-top: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: none; /* Hidden by default, shown on mobile only */
+    display: none;
+    /* Hidden by default, shown on mobile only */
 }
 
 .bio-modal-btn:hover {
