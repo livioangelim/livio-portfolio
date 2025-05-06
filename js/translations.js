@@ -19,6 +19,8 @@ const translations = {
         hero_greeting: "Hi, I'm <span>Livio</span>",
         hero_title: "Software Engineer",
         hero_expanded_bio: "Hi, I'm Livio—a problem-solving <strong class=\"highlight\">Software Engineer</strong> with a flair for turning <strong class=\"highlight\">complex challenges</strong> into scalable, <strong class=\"highlight\">AI-driven solutions</strong>. Armed with dual bachelor's degrees in <strong class=\"highlight\">Computer Science</strong> and <strong class=\"highlight\">Social Communication - Journalism</strong>, alongside fluency in four languages (English, Portuguese, Spanish, French), I bridge technical precision with human-centric design to build systems that optimize efficiency and impact.<br><br>My work spans <strong class=\"highlight\">AI/ML development</strong> (TensorFlow, NLP), <strong class=\"highlight\">cloud-native architectures</strong> (AWS, Docker), and <strong class=\"highlight\">data-driven applications</strong>, from engineering an ML loan-approval model (88% accuracy) to automating multilingual newsrooms with ethical AI tools like Jornal.IA. A relentless reinventor, I've pivoted from interviewing World Cup athletes to optimizing CI/CD pipelines, proving that code and creativity share the same compiler.",
+        more_about_me: "More about me",
+        less_about_me: "Less about me",
 
         // Skills section
         skills_title: "My Skills",
@@ -77,6 +79,8 @@ const translations = {
         hero_greeting: "Bonjour, je suis <span>Livio</span>",
         hero_title: "Ingénieur Logiciel",
         hero_expanded_bio: "Bonjour, je suis Livio—un <strong class=\"highlight\">ingénieur logiciel résolveur de problèmes</strong> avec un talent pour transformer des <strong class=\"highlight\">défis complexes</strong> en <strong class=\"highlight\">solutions évolutives basées sur l'IA</strong>. Armé de doubles diplômes en <strong class=\"highlight\">informatique</strong> et <strong class=\"highlight\">communication sociale - journalisme</strong>, ainsi que d'une maîtrise de quatre langues (anglais, portugais, espagnol, français), je concilie précision technique et conception centrée sur l'humain pour construire des systèmes qui optimisent l'efficacité et l'impact.<br><br>Mon travail couvre le <strong class=\"highlight\">développement d'IA/ML</strong> (TensorFlow, NLP), les <strong class=\"highlight\">architectures cloud-native</strong> (AWS, Docker), et les <strong class=\"highlight\">applications basées sur les données</strong>, de l'ingénierie d'un modèle d'approbation de prêts ML (précision de 88%) à l'automatisation de salles de rédaction multilingues avec des outils d'IA éthiques comme Jornal.IA. Réinventeur infatigable, je suis passé des interviews d'athlètes de la Coupe du Monde à l'optimisation des pipelines CI/CD, prouvant que le code et la créativité partagent le même compilateur.",
+        more_about_me: "En savoir plus",
+        less_about_me: "Voir moins",
 
         // Skills section
         skills_title: "Mes Compétences",
@@ -135,6 +139,8 @@ const translations = {
         hero_greeting: "Olá, eu sou <span>Livio</span>",
         hero_title: "Engenheiro de Software",
         hero_expanded_bio: "Olá, eu sou Livio—um <strong class=\"highlight\">Engenheiro de Software solucionador de problemas</strong> com talento para transformar <strong class=\"highlight\">desafios complexos</strong> em <strong class=\"highlight\">soluções escaláveis orientadas por IA</strong>. Equipado com diplomas de bacharel em <strong class=\"highlight\">Ciência da Computação</strong> e <strong class=\"highlight\">Comunicação Social - Jornalismo</strong>, além de fluência em quatro idiomas (inglês, português, espanhol, francês), eu uno precisão técnica com design centrado no ser humano para construir sistemas que otimizam eficiência e impacto.<br><br>Meu trabalho abrange <strong class=\"highlight\">desenvolvimento de IA/ML</strong> (TensorFlow, NLP), <strong class=\"highlight\">arquiteturas nativas em nuvem</strong> (AWS, Docker), e <strong class=\"highlight\">aplicações orientadas a dados</strong>, desde a engenharia de um modelo ML de aprovação de empréstimos (88% de precisão) até a automação de redações multilíngues com ferramentas éticas de IA como o Jornal.IA. Um reinventor incansável, passei de entrevistar atletas da Copa do Mundo a otimizar pipelines de CI/CD, provando que código e criatividade compartilham o mesmo compilador.",
+        more_about_me: "Mais sobre mim",
+        less_about_me: "Mostrar menos",
 
         // Skills section
         skills_title: "Minhas Habilidades",
@@ -193,6 +199,8 @@ const translations = {
         hero_greeting: "Hola, soy <span>Livio</span>",
         hero_title: "Ingeniero de Software",
         hero_expanded_bio: "Hola, soy Livio—un <strong class=\"highlight\">Ingeniero de Software solucionador de problemas</strong> con talento para transformar <strong class=\"highlight\">desafíos complejos</strong> en <strong class=\"highlight\">soluciones escalables impulsadas por IA</strong>. Armado con títulos de licenciatura en <strong class=\"highlight\">Informática</strong> y <strong class=\"highlight\">Comunicación Social - Periodismo</strong>, además de fluidez en cuatro idiomas (inglés, portugués, español, francés), combino la precisión técnica con el diseño centrado en el ser humano para construir sistemas que optimizan la eficiencia y el impacto.<br><br>Mi trabajo abarca <strong class=\"highlight\">desarrollo de IA/ML</strong> (TensorFlow, NLP), <strong class=\"highlight\">arquitecturas nativas en la nube</strong> (AWS, Docker), y <strong class=\"highlight\">aplicaciones basadas en datos</strong>, desde la ingeniería de un modelo ML de aprobación de préstamos (88% de precisión) hasta la automatización de redacciones multilingües con herramientas éticas de IA como Jornal.IA. Un reinventor incansable, he pasado de entrevistar a atletas de la Copa del Mundo a optimizar canales de CI/CD, demostrando que el código y la creatividad comparten el mismo compilador.",
+        more_about_me: "Más sobre mí",
+        less_about_me: "Ver menos",
 
         // Skills section
         skills_title: "Mis Habilidades",

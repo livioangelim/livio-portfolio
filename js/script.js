@@ -60,6 +60,12 @@ function setLanguage(lang) {
         }
     });
 
+    // Update active language button text
+    const activeLangText = document.querySelector('.active-lang-text');
+    if (activeLangText) {
+        activeLangText.textContent = lang.toUpperCase();
+    }
+
     // Select all elements with data-translate-key
     const elementsToTranslate = document.querySelectorAll('[data-translate-key]');
 
@@ -302,29 +308,147 @@ function generateProjectCards() {
     }
 }
 
-// Function to handle the expandable bio hover animation
+// Function to handle the expandable bio hover animation and button click
 function initializeBioExpansion() {
     const heroText = document.querySelector('.hero-text');
+    const moreAboutBtn = document.querySelector('.more-about-btn');
 
     if (!heroText) return;
 
     let hoverTimer;
 
-    // When mouse enters the hero text area
+    // For desktop: hover expansion functionality
     heroText.addEventListener('mouseenter', () => {
-        // Set a 1 second timer before triggering the expansion
-        hoverTimer = setTimeout(() => {
-            heroText.classList.add('expanded');
-        }, 1000); // 1 second delay
+        // Only apply hover effect on desktop (screens larger than 992px)
+        if (window.innerWidth > 992) {
+            hoverTimer = setTimeout(() => {
+                heroText.classList.add('expanded');
+            }, 1000); // 1 second delay
+        }
     });
 
-    // When mouse leaves the hero text area
     heroText.addEventListener('mouseleave', () => {
-        // Clear the timer if mouse leaves before 1 second
-        clearTimeout(hoverTimer);
-        // Remove the expanded class
-        heroText.classList.remove('expanded');
+        // Only for desktop
+        if (window.innerWidth > 992) {
+            clearTimeout(hoverTimer);
+            heroText.classList.remove('expanded');
+        }
     });
+
+    // For mobile: More about me button functionality
+    if (moreAboutBtn) {
+        moreAboutBtn.addEventListener('click', () => {
+            heroText.classList.toggle('expanded');
+
+            // Change button text based on expanded state
+            if (heroText.classList.contains('expanded')) {
+                moreAboutBtn.textContent = translations[currentLanguage]?.less_about_me || 'Less about me';
+            } else {
+                moreAboutBtn.textContent = translations[currentLanguage]?.more_about_me || 'More about me';
+            }
+        });
+    }
+
+    // Handle window resize events
+    window.addEventListener('resize', () => {
+        // If switching from mobile to desktop while expanded, maintain proper state
+        if (window.innerWidth > 992) {
+            if (heroText.classList.contains('expanded') && !heroText.matches(':hover')) {
+                heroText.classList.remove('expanded');
+                if (moreAboutBtn) {
+                    moreAboutBtn.textContent = translations[currentLanguage]?.more_about_me || 'More about me';
+                }
+            }
+        }
+    });
+}
+
+// Function to handle the bio modal
+function initializeBioModal() {
+    const bioModalBtn = document.querySelector('.bio-modal-btn');
+    const bioModal = document.getElementById('bioModal');
+    const closeBioModal = document.querySelector('.close-bio-modal');
+    const bioContent = document.querySelector('.bio-content');
+    const expandedBio = document.querySelector('.expanded-bio');
+    
+    if (!bioModalBtn || !bioModal || !closeBioModal || !bioContent || !expandedBio) return;
+    
+    // Open modal when clicking the bio button (only visible on mobile)
+    bioModalBtn.addEventListener('click', () => {
+        // Get bio content from the expanded-bio div
+        const bioHTML = expandedBio.innerHTML;
+        
+        // Populate the modal with the full bio content
+        bioContent.innerHTML = bioHTML;
+        
+        // Show the modal
+        bioModal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+    });
+    
+    // Close modal when clicking X button
+    closeBioModal.addEventListener('click', () => {
+        bioModal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+    
+    // Close modal when clicking outside content
+    window.addEventListener('click', event => {
+        if (event.target === bioModal) {
+            bioModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && bioModal.style.display === 'block') {
+            bioModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Helper function to detect if element is in viewport
+function isScrolledIntoView(el) {
+    const rect = el.getBoundingClientRect();
+    const elemTop = rect.top;
+    const elemBottom = rect.bottom;
+
+    // Element is partially visible in the viewport
+    return (elemTop < window.innerHeight - 200 && elemBottom >= 0);
+}
+
+// Initialize language dropdown functionality
+function initializeLanguageDropdown() {
+    const activeLangBtn = document.querySelector('.active-lang-btn');
+    const langDropdown = document.querySelector('.language-dropdown');
+
+    if (!activeLangBtn || !langDropdown) return;
+
+    // Toggle dropdown when clicking active language button
+    activeLangBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent this click from triggering the document click handler
+        langDropdown.classList.toggle('show');
+        activeLangBtn.classList.toggle('expanded');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+        langDropdown.classList.remove('show');
+        activeLangBtn.classList.remove('expanded');
+    });
+
+    // Prevent dropdown from closing when clicking inside it
+    langDropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    // Update active language display on page load
+    const activeLangText = document.querySelector('.active-lang-text');
+    if (activeLangText) {
+        activeLangText.textContent = currentLanguage.toUpperCase();
+    }
 }
 
 // Call this in your document ready function
@@ -607,6 +731,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize bio expansion hover animation
     initializeBioExpansion();
 
+    // Initialize bio modal functionality
+    initializeBioModal();
+
     // When loading the site, ensure "All" is active and all skill buttons are selected as standard
     const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
     if (allFilterBtn) {
@@ -620,4 +747,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Apply filtering
         filterProjects();
     }
+
+    // Initialize language dropdown functionality
+    initializeLanguageDropdown();
 });
