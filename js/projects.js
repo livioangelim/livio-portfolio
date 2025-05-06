@@ -20,8 +20,8 @@ const projectsData = [
         },
         imageUrl: "images/projects/ai-planning.jpeg",
         tech: ["Python", "Java", "React Native", "FastAPI", "Spring Boot", "PostgreSQL", "AWS", "GCP", "TensorFlow", "Docker", "Kubernetes", "MLflow", "BERT", "EasyOCR"],
-        repoUrl: "https://github.com/livioangelim/ai-planning-system",
-        docsUrl: "https://github.com/livioangelim/ai-planning-system/blob/main/documentation.md",
+        repoUrl: "",
+        docsUrl: "",
         demoUrl: "",
         videoUrl: ""
     },
@@ -41,8 +41,8 @@ const projectsData = [
         },
         imageUrl: "images/projects/livisa-travels.jpeg",
         tech: ["Python", "FastAPI", "React", "Next.js", "React Native", "PostgreSQL", "Redis", "Celery", "NLP", "Docker", "AWS", "GCP", "Terraform", "BERT", "GPT-2"],
-        repoUrl: "https://github.com/livioangelim/livisa-travels",
-        docsUrl: "https://github.com/livioangelim/livisa-travels/blob/main/documentation.md",
+        repoUrl: "",
+        docsUrl: "",
         demoUrl: "",
         videoUrl: ""
     },
