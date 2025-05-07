@@ -104,8 +104,8 @@ const projectsData = [
         },
         imageUrl: "images/projects/loan-checker.jpeg",
         tech: ["Python", "TensorFlow", "Flask", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-Learn", "Joblib", "SMOTE"],
-        repoUrl: "https://github.com/livioangelim/loan-eligibility-checker",
-        docsUrl: "https://github.com/livioangelim/loan-eligibility-checker/blob/main/technical-documentation.md",
+        repoUrl: "https://github.com/livioam/loan-eligibility-checker",
+        docsUrl: "https://github.com/livioam/loan-eligibility-checker/blob/main/technical-documentation.md",
         demoUrl: "",
         videoUrl: ""
     },
@@ -125,8 +125,8 @@ const projectsData = [
         },
         imageUrl: "images/projects/global-app.jpeg",
         tech: ["Java", "Spring Boot", "JUnit", "Angular", "TypeScript", "Docker", "AWS", "SQL", "Postman"],
-        repoUrl: "https://github.com/livioangelim/global-app-suite",
-        docsUrl: "https://github.com/livioangelim/global-application-suite/blob/main/TECHNICAL_DOCUMENTATION.md",
+        repoUrl: "https://github.com/livioam/global-app-suite",
+        docsUrl: "https://github.com/livioam/global-application-suite/blob/main/TECHNICAL_DOCUMENTATION.md",
         demoUrl: "",
         videoUrl: ""
     },
@@ -146,7 +146,7 @@ const projectsData = [
         },
         imageUrl: "images/projects/parcel-routing.jpeg",
         tech: ["Python", "Algorithms", "GPS Simulation", "Hash Tables"],
-        repoUrl: "https://github.com/livioangelim/parcel-routing",
+        repoUrl: "https://github.com/livioam/parcel-routing",
         docsUrl: "",
         demoUrl: "",
         videoUrl: ""
