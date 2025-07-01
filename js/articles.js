@@ -19,13 +19,52 @@ const articlesData = [
             pt: "Explorando as interseções de algoritmos, IA e desenvolvimento cultural na engenharia de software moderna e como eles moldam nossa paisagem digital.",
             es: "Explorando las intersecciones de algoritmos, IA y desarrollo cultural en la ingeniería de software moderna y cómo dan forma a nuestro paisaje digital."
         },
-        date: "April 10, 2025",
+        date: "April 16, 2025",
         source: "LinkedIn",
         sourceUrl: "https://www.linkedin.com/pulse/algorithmic-currents-anchors-ai-engineered-culture-liquid-mororo-t6eme/",
-        imageUrl: "images/articles/algorithm-ai.png",
-        tags: ["AI", "Algorithms", "Culture"]
+        imageUrl: "images/articles/article1.png",
+        tags: ["AI", "Algorithms", "Culture", "DigitalCulture", "Communication", "Journalism", "DigitalTransformation"]
+    },
+    {
+        id: "article2",
+        titleKey: {
+            en: "The AI Crossroads: Integrated Platforms vs. Specialized Tools – Which Path for Your Enterprise?",
+            fr: "La Croisée des Chemins de l'IA : Plateformes Intégrées vs Outils Spécialisés – Quelle Voie pour Votre Entreprise ?",
+            pt: "A Encruzilhada da IA: Plataformas Integradas vs. Ferramentas Especializadas – Qual Caminho para sua Empresa?",
+            es: "La Encrucijada de la IA: Plataformas Integradas vs. Herramientas Especializadas – ¿Qué Camino para su Empresa?"
+        },
+        descriptionKey: {
+            en: "Exploring the strategic choice between integrated AI platforms like Microsoft Copilot and specialized, API-driven tools for enterprise AI adoption.",
+            fr: "Explorer le choix stratégique entre les plateformes d'IA intégrées comme Microsoft Copilot et les outils spécialisés pilotés par API pour l'adoption de l'IA en entreprise.",
+            pt: "Explorando a escolha estratégica entre plataformas de IA integradas como o Microsoft Copilot e ferramentas especializadas orientadas por API para a adoção de IA empresarial.",
+            es: "Explorando la elección estratégica entre plataformas de IA integradas como Microsoft Copilot y herramientas especializadas impulsadas por API para la adopción de IA empresarial."
+        },
+        date: "June 19, 2025",
+        source: "LinkedIn",
+        sourceUrl: "https://www.linkedin.com/pulse/ai-crossroads-integrated-platforms-vs-specialized-tools-a-mororo-cywzf/",
+        imageUrl: "images/articles/article2.jpeg",
+        tags: ["AI", "EnterpriseAI", "AIStrategy", "DigitalTransformation"]
+    },
+    {
+        id: "article3",
+        titleKey: {
+            en: "The AI Ecosystem Showdown: Gemini's Coding Prowess & Copilot's Enterprise Dominance",
+            fr: "Le Choc des Écosystèmes IA : Les Prouesses de Codage de Gemini et la Domination d'Entreprise de Copilot",
+            pt: "O Confronto de Ecossistemas de IA: A Proeza de Codificação do Gemini e a Dominância Empresarial do Copilot",
+            es: "El Enfrentamiento de Ecosistemas de IA: la Habilidad de Codificación de Gemini y el Dominio Empresarial de Copilot"
+        },
+        descriptionKey: {
+            en: "A comparative analysis of Google's Gemini as a specialized coding tool versus Microsoft's Copilot as an integrated enterprise ecosystem, helping decide the right fit for different organizational needs.",
+            fr: "Une analyse comparative de Gemini de Google en tant qu'outil de codage spécialisé par rapport à Copilot de Microsoft en tant qu'écosystème d'entreprise intégré, aidant à décider de la meilleure solution pour différents besoins organisationnels.",
+            pt: "Uma análise comparativa do Gemini do Google como uma ferramenta de codificação especializada versus o Copilot da Microsoft como um ecossistema empresarial integrado, ajudando a decidir o ajuste certo para diferentes necessidades organizacionais.",
+            es: "Un análisis comparativo de Gemini de Google como herramienta de codificación especializada frente a Copilot de Microsoft como ecosistema empresarial integrado, ayudando a decidir la opción adecuada para diferentes necesidades organizativas."
+        },
+        date: "June 25, 2025",
+        source: "LinkedIn",
+        sourceUrl: "https://www.linkedin.com/pulse/ai-ecosystem-showdown-geminis-coding-prowess-copilots-livio-a-mororo-awp0e/",
+        imageUrl: "images/articles/article3.png",
+        tags: ["AI", "Gemini", "Copilot", "EnterpriseAI", "AIStrategy"]
     }
-    // Additional articles can be added here
 ];
 
 // Initialize articles section
