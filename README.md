@@ -127,14 +127,23 @@ A showcase of my technical articles covering topics in software engineering, AI,
 ### 4. **Contact Section**
 A streamlined section that provides my direct contact information, including email address and location, along with links to my professional profiles on LinkedIn and GitHub.
 
-## Planned Future Improvements
+## Further Enhancements
 
-### Phase 3: Performance Optimization (Planned for July 2025)
-- Add animations triggered by scroll position
-- Optimize image loading and compression
-- Implement service workers for offline capability
-- Add analytics to track user engagement
-- Improve accessibility compliance
+### Semi-Automated Content Updates
+
+To keep the portfolio's content current with minimal manual effort, a semi-automated workflow has been implemented to add new articles from LinkedIn.
+
+**How it Works:**
+
+1.  **Manual Trigger**: The process is initiated by manually running a **GitHub Actions workflow**. This is done from the repository's "Actions" tab, where the URL of the new LinkedIn article is provided as an input.
+2.  **Data Scraping & Processing**: The workflow executes a script that:
+    *   Fetches the content of the article URL.
+    *   Parses the HTML to extract the title, description, and publication date.
+    *   Uses a translation API (e.g., DeepL, Google Translate) to generate translations for the title and description in French, Portuguese, and Spanish.
+3.  **File Updates**: The script then reads the `js/articles.js` file, creates a new JavaScript object for the article, and appends it to the `articlesData` array.
+4.  **Pull Request Creation**: Finally, the workflow commits the updated `js/articles.js` file to a new branch and automatically opens a pull request.
+
+This system streamlines content updates by automating the most tedious parts of the process while still allowing for a final review before changes go live. Merging the pull request automatically deploys the updated portfolio to GitHub Pages.
 
 ## How to View the Portfolio
 The portfolio is publicly accessible online. You can explore the live version by visiting the following URL:
