@@ -50,7 +50,7 @@ const translations = {
 
         // Contact section
         contact_title: "Contact Me",
-        contact_intro: "I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision. Feel free to reach out using the form or via direct email.",
+        contact_intro: "I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision. Feel free to reach out via direct email or LinkedIn.",
         contact_location: "Montreal, CAN",
         contact_name: "Name",
         contact_email: "Email",
@@ -110,7 +110,7 @@ const translations = {
 
         // Contact section
         contact_title: "Contactez-Moi",
-        contact_intro: "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités de faire partie de votre vision. N'hésitez pas à me contacter en utilisant le formulaire ou par email direct.",
+        contact_intro: "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités de faire partie de votre vision. N'hésitez pas à me contacter par email direct ou sur LinkedIn.",
         contact_location: "Montréal, CAN",
         contact_name: "Nom",
         contact_email: "Email",
@@ -170,7 +170,7 @@ const translations = {
 
         // Contact section
         contact_title: "Contate-me",
-        contact_intro: "Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte da sua visão. Sinta-se à vontade para entrar em contato usando o formulário ou via email direto.",
+        contact_intro: "Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte da sua visão. Sinta-se à vontade para entrar em contato por email direto ou pelo LinkedIn.",
         contact_location: "Montreal, CAN",
         contact_name: "Nome",
         contact_email: "Email",
@@ -230,7 +230,7 @@ const translations = {
 
         // Contact section
         contact_title: "Contáctame",
-        contact_intro: "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tu visión. No dudes en ponerte en contacto utilizando el formulario o mediante correo electrónico directo.",
+        contact_intro: "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tu visión. No dudes en ponerte en contacto por correo electrónico directo o en LinkedIn.",
         contact_location: "Montreal, CAN",
         contact_name: "Nombre",
         contact_email: "Correo",
