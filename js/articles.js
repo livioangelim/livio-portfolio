@@ -17,7 +17,7 @@ const articlesData = [
             en: "Exploring the intersections of algorithms, AI, and cultural development in modern software engineering and how they shape our digital landscape.",
             fr: "Explorer les intersections des algorithmes, de l'IA et du développement culturel dans l'ingénierie logicielle moderne et comment ils façonnent notre paysage numérique.",
             pt: "Explorando as interseções de algoritmos, IA e desenvolvimento cultural na engenharia de software moderna e como eles moldam nossa paisagem digital.",
-            es: "Explorando las intersecciones de algoritmos, IA y desarrollo cultural en la ingeniería de software moderna y cómo dan forma a nuestro paisaje digital."
+            es: "Explorando las intersecciones de algoritmos, IA y desenvolvimento cultural en la ingeniería de software moderna e cómo dan forma a nuestro paisaje digital."
         },
         date: "April 16, 2025",
         source: "LinkedIn",
@@ -57,7 +57,7 @@ const articlesData = [
             en: "A comparative analysis of Google's Gemini as a specialized coding tool versus Microsoft's Copilot as an integrated enterprise ecosystem, helping decide the right fit for different organizational needs.",
             fr: "Une analyse comparative de Gemini de Google en tant qu'outil de codage spécialisé par rapport à Copilot de Microsoft en tant qu'écosystème d'entreprise intégré, aidant à décider de la meilleure solution pour différents besoins organisationnels.",
             pt: "Uma análise comparativa do Gemini do Google como uma ferramenta de codificação especializada versus o Copilot da Microsoft como um ecossistema empresarial integrado, ajudando a decidir o ajuste certo para diferentes necessidades organizacionais.",
-            es: "Un análisis comparativo de Gemini de Google como herramienta de codificación especializada frente a Copilot de Microsoft como ecosistema empresarial integrado, ayudando a decidir la opción adecuada para diferentes necesidades organizativas."
+            es: "Un análisis comparativo de Gemini de Google como herramienta de codificación especializada frente a Copilot de Microsoft como ecosistema empresarial integrado, ayudando a decidir la opción adecuada para diferentes necessidades organizativas."
         },
         date: "June 25, 2025",
         source: "LinkedIn",
@@ -149,72 +149,73 @@ function setupArticlesFilters() {
     const filterContainer = document.querySelector('.articles-filters');
     if (!filterContainer) return;
 
-    // Get unique tags from all articles
+    // --- Button Creation and Ordering ---
+
+    // Find the "All" button which is hardcoded in the HTML
+    const allButton = filterContainer.querySelector('[data-filter="all"]');
+
+    // Create and add the "None" button right after "All"
+    if (allButton) {
+        const noneButton = document.createElement('button');
+        noneButton.className = 'filter-btn';
+        noneButton.setAttribute('data-filter', 'none');
+        noneButton.setAttribute('data-translate-key', 'filter_none');
+        noneButton.textContent = 'None'; // Default text, will be updated by translation
+        allButton.insertAdjacentElement('afterend', noneButton);
+    }
+
+    // Get unique tags and create a button for each
     const allTags = new Set();
     articlesData.forEach(article => {
         article.tags.forEach(tag => allTags.add(tag));
     });
 
-    // Create filter buttons for each tag
     allTags.forEach(tag => {
         const button = document.createElement('button');
         button.className = 'filter-btn';
         button.setAttribute('data-filter', tag);
         button.textContent = tag;
-
-        button.addEventListener('click', (e) => {
-            // Toggle active class
-            document.querySelectorAll('.articles-filters .filter-btn').forEach(btn => {
-                if (btn === e.target) {
-                    btn.classList.toggle('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-
-            // Get active filter or default to 'all'
-            const activeFilter = document.querySelector('.articles-filters .filter-btn.active');
-            const filterValue = activeFilter ? activeFilter.getAttribute('data-filter') : 'all';
-
-            // Filter articles
-            renderArticles(filterValue);
-        });
-
         filterContainer.appendChild(button);
     });
 
-    // Add click handler for the "All" filter
-    const allFilterBtn = filterContainer.querySelector('[data-filter="all"]');
-    if (allFilterBtn) {
-        allFilterBtn.addEventListener('click', (e) => {
-            // Toggle active class
-            e.target.classList.toggle('active');
+    // --- Event Listener Logic ---
 
-            // Remove active class from other filters
-            document.querySelectorAll('.articles-filters .filter-btn:not([data-filter="all"])').forEach(btn => {
-                btn.classList.remove('active');
-            });
+    // Add a single event listener to the container for delegation
+    filterContainer.addEventListener('click', (e) => {
+        if (!e.target.matches('.filter-btn')) return;
 
-            // Filter based on whether "All" is active
-            if (e.target.classList.contains('active')) {
-                renderArticles('all');
-            } else {
-                // If "All" is not active, show no articles
-                const articlesGrid = document.getElementById('articlesGrid');
-                if (articlesGrid) {
-                    articlesGrid.innerHTML = '';
-                    const noArticlesMsg = document.createElement('p');
-                    noArticlesMsg.className = 'no-articles';
-                    noArticlesMsg.setAttribute('data-translate-key', 'no_articles');
-                    noArticlesMsg.textContent = translations[currentLanguage].no_articles || 'No articles selected. Please select a filter.';
-                    articlesGrid.appendChild(noArticlesMsg);
-                }
-            }
+        const clickedButton = e.target;
+        const filter = clickedButton.getAttribute('data-filter');
+
+        // If the clicked button is already active, do nothing
+        if (clickedButton.classList.contains('active')) {
+            return;
+        }
+
+        // Deactivate all other buttons
+        filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
         });
-    }
+
+        // Activate the clicked button
+        clickedButton.classList.add('active');
+
+        // Handle the filter logic
+        if (filter === 'none') {
+            // Clear the grid
+            const articlesGrid = document.getElementById('articlesGrid');
+            articlesGrid.innerHTML = ''; // Clear existing cards
+        } else {
+            // Render articles based on the selected filter ('all' or a specific tag)
+            renderArticles(filter);
+        }
+    });
 }
 
 // Refresh articles when language changes
 function refreshArticles() {
     renderArticles();
 }
+
+// Initialize the articles section once the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initArticles);
