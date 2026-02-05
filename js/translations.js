@@ -61,7 +61,7 @@ const translations = {
         contact_error: "Oops! Something went wrong. Please try again later.",
 
         // Footer
-        footer_copyright: "&copy; 2020 Livio A.M. All Rights Reserved."
+        footer_copyright: "&copy; 2026 Livio A.M. All Rights Reserved."
     },
 
     // French translations
@@ -121,7 +121,7 @@ const translations = {
         contact_error: "Oups ! Quelque chose s'est mal passé. Veuillez réessayer plus tard.",
 
         // Footer
-        footer_copyright: "&copy; 2020 Livio A.M. Tous Droits Réservés."
+        footer_copyright: "&copy; 2026 Livio A.M. Tous Droits Réservés."
     },
 
     // Portuguese translations
@@ -181,7 +181,7 @@ const translations = {
         contact_error: "Ops! Algo deu errado. Por favor, tente novamente mais tarde.",
 
         // Footer
-        footer_copyright: "&copy; 2020 Livio A.M. Todos os Direitos Reservados."
+        footer_copyright: "&copy; 2026 Livio A.M. Todos os Direitos Reservados."
     },
 
     // Spanish translations
@@ -241,6 +241,6 @@ const translations = {
         contact_error: "¡Ups! Algo salió mal. Por favor, inténtalo de nuevo más tarde.",
 
         // Footer
-        footer_copyright: "&copy; 2020 Livio A.M. Todos los Derechos Reservados."
+        footer_copyright: "&copy; 2026 Livio A.M. Todos los Derechos Reservados."
     }
 };
