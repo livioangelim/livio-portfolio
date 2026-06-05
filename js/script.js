@@ -273,22 +273,11 @@ function generateProjectCards() {
         projectCard.classList.add('project-card');
         projectCard.setAttribute('data-id', project.id);
 
-        // Create a brief summary from the description by extracting text from the HTML
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = project.descriptionKey[currentLanguage];
-        const plainText = tempDiv.textContent || tempDiv.innerText;
-        const summaryText = plainText.substring(0, 100) + '...';
-
-        // Create card HTML with lazy loading for image
+        // Create card HTML
         projectCard.innerHTML = `
-            <img class="project-card-image lazy-load" 
-                 src="images/placeholder.jpg" 
-                 data-src="${project.imageUrl}" 
-                 alt="${project.titleKey[currentLanguage]}" 
-                 loading="lazy">
             <div class="project-card-content">
                 <h3 class="project-card-title">${project.titleKey[currentLanguage]}</h3>
-                <p>${summaryText}</p>
+                <p>${project.shortDescriptionKey[currentLanguage]}</p>
                 <div class="project-card-tech">
                     ${project.tech.map(tech => `<span>${tech}</span>`).join('')}
                 </div>
@@ -480,7 +469,7 @@ function openProjectModal(project) {
     modalTitle.textContent = project.titleKey[currentLanguage];
 
     // Use innerHTML for description to properly render HTML tags
-    modalDescription.innerHTML = project.descriptionKey[currentLanguage];
+    modalDescription.innerHTML = project.longDescriptionKey[currentLanguage];
 
     // Clear and populate tech stack
     modalTechStack.innerHTML = '';
@@ -491,7 +480,7 @@ function openProjectModal(project) {
         modalTechStack.appendChild(techBadge);
     });
 
-    // Set project media (image or video) with lazy loading
+    // Set project media (video) with lazy loading
     modalMedia.innerHTML = '';
     if (project.videoUrl && project.videoUrl !== '') {
         // If project has a video, embed it with lazy loading
@@ -506,15 +495,9 @@ function openProjectModal(project) {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen></iframe>
         `;
+        modalMedia.style.display = 'block';
     } else {
-        // Otherwise, display the image with lazy loading
-        modalMedia.innerHTML = `
-            <img class="lazy-load" 
-                 src="images/placeholder.jpg" 
-                 data-src="${project.imageUrl}" 
-                 alt="${project.titleKey[currentLanguage]}" 
-                 loading="lazy">
-        `;
+        modalMedia.style.display = 'none';
     }
 
     // Set links
